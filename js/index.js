@@ -1,4 +1,3 @@
-//This is javascript and jQuery code 
 $(document).ready(function(){
 $('#dark').click(function(){
 	if ($(this).text() == 'Dark'){
@@ -52,7 +51,35 @@ $('.scroll-menu').click(function(){
 	scrollTop: $(this.hash).offset().top
       }, 5000);
 	});
-//date
+//mailto
+$(function () {
+  $('.send').on('click', function (event) {
+      event.preventDefault();
+    var email = 'buddhalimbu157@gmail.com';
+    var subject = $('#subject').val();
+    var emailBody = $('#textarea').val();
+    window.location = 'mailto:' + email + '?subject=' + subject + '&body=' +   emailBody;
+  });
+});
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("myslider");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
 
 $('.header').prepend('<div class="date-holder"><div id="month"/><div class="time-holder"><span id="hours"/>:<span id="minutes"/></div></div>');
 
@@ -70,7 +97,62 @@ c.innerHTML = minute;
 
 //dark mode
 $(document).ready(function(){
-	$("#nightmode").click(function(){$("body").toggleClass("darktheme")}),$("body").toggleClass(localStorage.toggled),$("#nightmode").click(function(){"darktheme"!=localStorage.toggled?($("body").toggleClass("darktheme",!0),localStorage.toggled="darktheme"):($("body").toggleClass("darktheme",!1),localStorage.toggled="")});});
-	
+	$("#nightmode").click(function(){$("body").toggleClass("darktheme");
+if($('.darkmode-title').text() == 'Night Mode'){
+$('.darkmode-title').text('Day Mode');}else{$('.darkmode-title').text('Night Mode')
+}}),$("body").toggleClass(localStorage.toggled),$("#nightmode").click(function(){"darktheme"!=localStorage.toggled?($("body").toggleClass("darktheme",!0),localStorage.toggled="darktheme"):($("body").toggleClass("darktheme",!1),localStorage.toggled="")});});
+
+ //type
+
+                  function write (obj, sentence, i, cb) {
+                    if (i != sentence.length) {
+                      setTimeout(function () {
+                        i++
+                        console.log('in timeout', i)
+                        obj.innerHTML = sentence.substr(0, i+1) +' <em aria-hidden="true"></em>';
+                        write(obj, sentence, i, cb)
+                      }, 120)
+                    } else {
+                      console.log(i)
+                      cb()
+                    }
+                  }
+                   function erase (obj, cb,i) {
+                   var sentence = obj.innerText
+                      if (sentence.length != 0) {
+                       setTimeout(function () {
+                       sentence = sentence.substr(0,sentence.length-1)
+                       console.log('in timeout', i)
+                       obj.innerText = sentence
+                       erase(obj, cb)
+                        }, 18/(i*(i/10000000)))
+                        } else {
+                        obj.innerText = " "
+                        cb()
+                     }
+                    }
+                    var typeline = document.querySelector("#typeline")
+
+                     function writeerase(obj, sentence, time, cb) {
+                      write(obj, sentence, 0, function () {
+                       setTimeout(function () {
+                       erase(obj, cb) }, time) })
+                       }
+
+                  var sentences = [
+                    "a Programmer. ",
+                    "a Wed Dev. ",
+                    "a Blogger. ",
+                    "a Designer. "
+                  ]
+                    
+                  var counter = 0
+                  function loop () {
+                    var sentence = sentences[counter % sentences.length]
+                    writeerase(typeline, sentence, 1500, loop)
+                    counter++
+                  }
+
+                  loop() 	
 
 });
