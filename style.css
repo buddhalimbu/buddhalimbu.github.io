@@ -1,6 +1,6 @@
-*{margin:0;padding:0;box-sizing:padding-box}
-body,html{box-sizing:border-box;margin:0;padding:0;height:100%;width:auto;box-sizing:border-box;color:#eee;font-family:'Montserrat',sans-serif;scroll-behavior:smooth}
-body{background:#fff;overflow-x:hidden;box-sizing:border-box}
+*{margin:0;padding:0;}
+body,html{box-sizing:border-box;margin:0;padding:0;height:100%;width:100%;box-sizing:border-box;color:#eee;font-family:'Montserrat',sans-serif;scroll-behavior:smooth}
+body{background:#fff;overflow-x:hidden;}
 body a{text-decoration:none}
 body .heading{text-align:center;position:relative;font-size:50px;font-weight:900;color:#212121;;margin:80px auto;text-transform:uppercase}
 body .heading:before,body .heading:after{content:"";width:100px;height:10px;background:#212121;display:inline-block}
