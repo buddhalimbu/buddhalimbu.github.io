@@ -112,8 +112,8 @@ body .heading:after{margin-left:14px}
 .item-wrapper{display:flex;justify-content:space-between;align-items:center;display:-webkit-flex}
 .item .box{height:auto;background:#;width:100%;max-width:100%;margin:20px 1.1% 20px;display:flex;display:-webkit-flex;justify-content:center;align-items:center;flex-direction:column;-webkit-flex-direction:column;border-radius:5px;color:#212121}
 .item .box span{font-size:40px;height:160px;width:auto;line-height:160px;width:100%;box-sizing:border-box;background:#;margin:0 auto;width:94%;margin-top:-110px;border-radius:7px;text-align:center;color:#7a7a7a}
-.item .box h3{padding:14px;font-size:22px;text-transform:uppercase;color:#333}
-.item .box span i{background:#ccc;padding:0;height:84px;width:84px;line-height:74px;text-align:center;border-radius:50%}
+.item .box h3{padding:14px;font-size:22px;text-transform:uppercase;color:#545454}
+.item .box span i{background:#e0e0e0;padding:0;height:84px;width:84px;line-height:74px;text-align:center;border-radius:50%}
 .item .box p{padding:20px;text-align:center;color:#6a6a6a;border-radius:4px;display:block;width:100%;box-sizing:border-box}
 .about-me{background:#fff;padding:26px 0;clip-path:polygon(0 0,100% 0,100% 100%,0 calc(100% - 0));height:auto;padding:26px 0;position:relative;margin-top:40px}
 .about-me .container{width:100%;max-width:1000px;margin:0 auto}
@@ -210,6 +210,7 @@ footer .container{width:100%;max-width:1000px;margin:0 auto}
 .darktheme .sticky{background:#212121}
 .darktheme .menu-link{background:none}
 .darktheme .svg svg{fill:#111}
+.darktheme .about-me{background:#111}
 @media screen and (max-width:1020px){
   .container{padding:0 100px;margin:0 auto;width:100%;box-sizing:border-box}
   .theme-item{height:auto}
@@ -232,7 +233,7 @@ footer .container{width:100%;max-width:1000px;margin:0 auto}
   .container{padding:0 60px}
   .menu-link{padding:0 40px}
   .item-wrapper{flex-direction:column;-webkit-flex-direction:column}
-  .item .box{margin-bottom:60px}
+  .item .box{margin-bottom:100px}
   .image{float:none;text-align:center;margin:0 auto;padding:0}
   .about-me{height:auto;padding-bottom:50px}
   .about-wrapper{flex-direction:column;-webkit-flex-direction:column}
