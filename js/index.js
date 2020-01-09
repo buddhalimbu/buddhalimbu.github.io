@@ -97,10 +97,7 @@ c.innerHTML = minute;
 
 //dark mode
 $(document).ready(function(){
-	$("#nightmode").click(function(){$("body").toggleClass("darktheme");
-if($('.darkmode-title').text() == 'Night Mode'){
-$('.darkmode-title').text('Day Mode');}else{$('.darkmode-title').text('Night Mode')
-}}),$("body").toggleClass(localStorage.toggled),$("#nightmode").click(function(){"darktheme"!=localStorage.toggled?($("body").toggleClass("darktheme",!0),localStorage.toggled="darktheme"):($("body").toggleClass("darktheme",!1),localStorage.toggled="")});});
+	$("#nightmode").click(function(){$("body").toggleClass("darktheme")}),$("body").toggleClass(localStorage.toggled),$("#nightmode").click(function(){"darktheme"!=localStorage.toggled?($("body").toggleClass("darktheme",!0),localStorage.toggled="darktheme"):($("body").toggleClass("darktheme",!1),localStorage.toggled="")});});
 
  //type
 
