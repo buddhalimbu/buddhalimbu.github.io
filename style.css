@@ -37,7 +37,7 @@ body .heading:after{margin-left:14px}
 .social-wrap .snapchat a:before{content:"\f2ac"}
 .social-wrap .email a:before{content:"\f0e0";font-family:'Font Awesome 5 Free'}
 .social-wrap .external-link a:before{content:"\f35d";font-family:'Font Awesome 5 Free';font-weight:900}
-.header{background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.8)),url('image/boynature.jpg');background-size:cover;background-repeat:no-repeat center bottom;object-fit:cover;background-position:fixed;position:relative;overflow:hidden;border-bottom-right-radius:0;height:auto;margin-bottom:0}
+.header{background:linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.3)),url('image/boynature.jpg');background-size:cover;background-repeat:no-repeat center bottom;object-fit:cover;background-position:fixed;position:relative;overflow:hidden;border-bottom-right-radius:0;height:auto;margin-bottom:0}
 .svg{position:absolute;bottom:-5px;left:0;width:100%;z-index:2}
 .svg svg{fill:#fff}
 .date-holder{position:absolute;top:120px;right:80px;background:rgb(223,222,222);border-radius:0;font-weight:bold}
@@ -178,17 +178,19 @@ footer .container{width:100%;max-width:1000px;margin:0 auto}
 .credit{display:flex;justify-content:space-between;align-items:center}
 .darkmode{padding:0 10px;position:relative;background:#1251b9;padding:16px;z-index:999;border-radius:10px;box-shadow:0 2px 5px 5px 2px rgba(0,0,0,0.2)}
 .darkmode-title{font-size:13px;color:#fff}
+.darkmode-title:before{content: "Night Mode";display: inline-block;}
 .togglenight{display:none}
 .togglenight + .togglenight-btn{outline:0;display:inline-block;width:45px;height:10px;position:relative;cursor:pointer;margin-left:5px;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
 .togglenight + .togglenight-btn:before{position:absolute;content:"";height:16px;width:16px;left:0;bottom:-2px;background-color:#d7ccc8;-webkit-transition:.4s;transition:.4s;border-radius:50%}
 .togglenight-switch + .togglenight-btn{background:rgba(0,0,0,.4);border-radius:99em;transition:all .4s ease}
 .darktheme .darkmode .togglenight-btn:before{-webkit-transform:translateX(30px);-ms-transform:translateX(300px);transform:translateX(30px)}
 .darktheme .darkmode{background:rgb(77,75,75);color:#d7ccc8!important}
+.darktheme .darkmode-title:before{content: "Light Mode";}
 .darktheme a{color:#d7ccc8}
 .darktheme a:hover{color:#eee!important}
 .darktheme{background-color:#111!important;color:#ababab}
-.darktheme .header{background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url(image/boynature.jpg);background-size:cover;background-repeat:no-repeat;background-position:cover}
-.darktheme .navbar{background:rgba(0,0,0,0.99)}
+.darktheme .header{background:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.2)),url(image/boynature.jpg);background-size:cover;background-repeat:no-repeat;background-position:cover}
+.darktheme .navbar{background:rgba(0,0,0,0.4)}
 .darktheme .item .box{background:#262626;border-top:10px solid #070707}
 .darktheme .item .box span{background:#070707}
 .darktheme .item .box p,.darktheme .item .box h3{color:#ababab}
@@ -210,7 +212,10 @@ footer .container{width:100%;max-width:1000px;margin:0 auto}
 .darktheme .sticky{background:#212121}
 .darktheme .menu-link{background:none}
 .darktheme .svg svg{fill:#111}
-.darktheme .about-me{background:#111}
+.darktheme .item{background:#111}
+.darktheme .sub-wrap,.darktheme #angle{background: #262626;color: #eee}
+.darktheme .a-link a span {background: #262626;color: #eee}
+.darktheme .send {background: #363636;color: #eee}
 @media screen and (max-width:1020px){
   .container{padding:0 100px;margin:0 auto;width:100%;box-sizing:border-box}
   .theme-item{height:auto}
