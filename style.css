@@ -140,7 +140,7 @@ clear:both;margin:80px auto;width:47.7%;flex-direction:column}
 .theme-item h3{font-size:35px;color:#212121;padding:10px 0}
 .theme-item p{color:#223232;font-size:16px;padding:10px 0}
 .demo{padding:14px 0}
-.demo a{width:100px;padding:14px 10px;line-height:40px;text-align:center;background:#fff;display:inline-block;text-decoration:none;text-transform:uppercase;color:#33c31f;border-radius:100px;border:6px solid #33c31f;font-weight:800}
+.demo a{width:100px;padding:10px 10px;line-height:40px;text-align:center;background:#fff;display:inline-block;text-decoration:none;text-transform:uppercase;color:#33c31f;border-radius:100px;border:6px solid #33c31f;font-weight:800}
 .demo a:hover{background:#33c31f;color:#eee}
 .sub{background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url('image/subimg.jpg');background-size:cover;background-position:center center;background-repeat:no-repeat center bottom;padding:50px 0}
 .sub .container{width:100%;max-width:1020px;margin:0 auto}
