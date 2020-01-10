@@ -1,4 +1,4 @@
-*,*:after,*:before {margin: 0;padding: 0;box-sizing:border-box;-webkit-box-sizing:border-box;}
+*,*:after,*:before {margin: 0;padding: 0}
 body,html {color: #eee;font-family: 'Montserrat',sans-serif;scroll-behavior: smooth;}
 body {background:#fff;overflow-x: hidden;}
 body a{text-decoration:none}
