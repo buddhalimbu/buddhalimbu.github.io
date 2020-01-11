@@ -1,3 +1,4 @@
+//All the code are writter in jquery and javascript by buddha limbu
 $(document).ready(function(){
 $('#dark').click(function(){
 	if ($(this).text() == 'Dark'){
@@ -138,7 +139,7 @@ $(document).ready(function(){
 
                   var sentences = [
                     "a Programmer. ",
-                    "a Wed Dev. ",
+                    "a Web Dev. ",
                     "a Blogger. ",
                     "a Designer. "
                   ]
