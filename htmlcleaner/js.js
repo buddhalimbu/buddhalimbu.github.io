@@ -1,10 +1,10 @@
 //JavaScript code for convert and clear
-		function Clear(){
-			var a = document.getElementById('textarea');
-			a.value="",a.focus(),document.getElementById('convert').disabled=!1
-		}
-		function Convert(){
-			var a = document.getElementById('textarea'),
+function Clear(){
+var a = document.getElementById('textarea');
+a.value="",a.focus(),document.getElementById('convert').disabled=!1
+}
+function Convert(){
+var a = document.getElementById('textarea'),
       b=a.value,
       c=document.getElementById('opt1'),
       d=document.getElementById('opt2'),
