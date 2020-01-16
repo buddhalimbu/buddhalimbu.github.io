@@ -1,0 +1,234 @@
+/*main css here*/
+		*{
+			margin: 0;
+			padding: 0;
+      box-sizing: border-box;
+		}
+
+		body {
+			background: #f0f0f0;
+      font-family: 'Muli',sans-serif;
+
+		}
+    .head {
+      background: #fff;
+      padding: 14px 0
+    }
+    .header{
+      margin-bottom: 30px
+    }
+    .footer {
+      margin-top: 30px
+    }
+    .boxes {background: none}
+    .container {
+      width: 100%;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 10px
+    }
+    .head h1 {padding: 10px 0}
+    .head p {padding: 14px 0}
+    .credit {margin: 40px 0}
+    .credit a {
+      text-decoration: none;
+      color: #d50000;
+    }
+
+		.area-box {
+			display: block;
+			background: #e0f2f1;
+			padding: 20px;
+			border-radius: 8px;
+			box-shadow: 0px 1px 4px 1px rgba(0,0,0,0.3);
+      box-sizing: border-box;
+		}
+		.text-box {
+			background: #fff;
+			border-radius: 20px;
+			height: auto;
+      position: relative;
+			
+		}
+		#textarea {
+			width: 100%;
+			margin: 0 auto;
+			box-sizing: border-box;
+			height: 300px;
+			padding: 20px;
+			font-size: 14px;
+			background: #none;
+			border-radius: 1px;
+			border:0;
+			outline: 0;
+			border-top-right-radius: 12px;
+			border-top-left-radius: 12px;
+			border-top: 4px solid #999
+		}
+
+		/* button group */
+		.button-box {
+			display: flex;justify-content: center;align-items: center;
+			padding: 30px 0 0 0
+		}
+		.button-box button {
+			width:110px;
+			padding: 10px 12px;
+			border:0;
+			outline: 0;
+			background: rgba(255,255,255,0.2);
+			color: #d7ccc8;
+			margin: 0 13px;
+			font-size: 14px;
+			display: block;
+			border-radius: 100px;
+			box-shadow: 0px 2px 5px 2px rgba(0,0,0,0.2)
+		}
+		.button-box button:hover {
+			background: #d7ccc8;color: #311b92;
+			cursor: pointer;
+		}
+
+		/*checkbox*/
+		.check-box {
+			background:#006064;
+			margin: 0 auto;
+			padding:50px 16px;
+			color: #d7ccc8;
+			font-size: 20px;
+			text-transform: uppercase;
+			border-bottom-right-radius: 12px;
+			border-bottom-left-radius: 12px;
+			display: block;
+		}
+		
+		.check-box input {
+			padding: 0;
+			height: initial;
+			width: initial;
+			margin-bottom: 0;
+			display: none;
+			cursor: pointer;
+		}
+		.input-group {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-wrap: wrap;
+		}
+
+		.check-box label {
+			position: relative;
+			cursor: pointer;
+		font-size: 12px;margin: 10px 4px
+		}
+		.check-box label:before {
+			content: "";
+			-webkit-appearance: none;
+			background: #f3f3f3;
+			box-shadow: 0 1px 2px rgba(0.0.0.0.05),inset 0px -15px 10px -12px rgba(0,0,0,0.05);
+			padding: 6px;
+			display: inline-block;
+			position: relative;
+			vertical-align: middle;
+			cursor: pointer;
+			margin-right: 6px;
+			border:2px solid #d7ccc8;
+			border-radius: 50%
+		}
+		.check-box input:checked + label:after {
+			content: "";
+			display: block;
+			position: absolute;
+			top: 1px;
+			left: 4px;
+			width: 3px;
+			height: 8px;
+			border:solid #fff;
+			border-width: 0 4px 4px 0;
+			transform: rotate(45deg);
+
+		}
+
+		.check-box input:checked + label:before {
+			background: rgba(0,0,0,0.7);
+			border:2px solid #212121;
+		}
+    /*DEMO*/
+    .demo-block {
+      padding: 14px;
+      background: #f4f4f4;
+      border-color: #ddd;
+      border-width: 2px;
+      border-style: dashed;
+      border-radius: 3px;
+      display: block;
+      margin: 20px 0;
+      position: relative;
+    }
+    .copy {
+      position: absolute;
+      padding: 10px;
+      background: #d50000;
+      border-radius: 3px;
+      color: #fff;
+      top: 10px;
+      right: 10px;
+      z-index: 22;
+      cursor: pointer;
+    }
+    .copy:hover {background: #1f2024}
+    .demo-block code {white-space:nowrap; }
+    .gotohome{
+      display: inline-block;
+      margin: 10px 0
+    }
+    .gotohome a {
+      text-decoration: none;
+      padding: 10px;
+      border-radius: 3px;
+      background: #1f2024;
+      color: #fff;
+    }
+    .gotohome a:hover {
+      background: #d50000
+    }
+    /*ALL DEMO*/
+    .all-demo {
+      background: #fff;
+      padding:20px  0;
+      margin: 14px 0
+    }
+    .all-demo #tt {
+      background: #f5f5f5;
+      border-radius: 3px;
+      padding: 14px;
+      border-color: tomato;
+      border-width: 2px;
+      border-style: dashed;
+      height: 200px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    .all-demo #tt:focus {outline: none}
+    .b {
+      padding: 10px 14px;
+      border-radius: 3px;
+      border:none;
+      outline: none;
+      color: #fff;
+      background: #d50000;
+      margin-top: 20px;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+    .demo {
+      background: tomato;
+      padding: 20px 14px;
+      border-bottom: 10px solid red;
+      border-radius: 3px;
+      margin: 20px 0;
+      color: #fff;
+      font-size: 17px
+
+    }
