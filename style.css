@@ -38,7 +38,7 @@ body .heading:after{margin-left:14px}
 .social-wrap .snapchat a:before{content:"\f2ac"}
 .social-wrap .email a:before{content:"\f0e0";font-family:'Font Awesome 5 Free'}
 .social-wrap .external-link a:before{content:"\f35d";font-family:'Font Awesome 5 Free';font-weight:900}
-.header{background:linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.3)),url('image/boynature.jpg');background-size:cover;
+.header{background:linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.3)),url('image/dusk.jpg');background-size:cover;
   background-repeat:no-repeat center bottom;object-fit:cover;background-position:fixed;position:relative;
   overflow:hidden;border-bottom-right-radius:0;height:auto;margin-bottom:0;box-sizing:border-box}
 .svg{position:absolute;bottom:-5px;left:0;width:100%;z-index:2}
