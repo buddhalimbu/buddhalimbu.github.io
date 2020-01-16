@@ -64,7 +64,7 @@ body .heading:after{margin-left:14px}
 .social ul li{float:left;display:inline-block;list-style:none}
 .social ul li a{display:block;font-size:20px;border-radius:3px;width:40px;height:40px;line-height:40px;margin:0 5px}
 .social ul li a:hover{background:#D50000;color:#EEE}
-.navbar{background:rgba(0,0,0,0.5)}
+.navbar{background:rgba(0,0,0,0.2)}
 .navbar > .container{max-width:1000px;width:100%;margin:0 auto}
 .topnav{display:flex;justify-content:space-between;align-items:center;display:-webkit-flex;-webkit-justify-content:space-between;height:100px}
 .linkandbutton{display:flex;justify-content:space-between;align-items:center;display:-webkit-flex;-webkit-justify-content:space-between}
@@ -184,7 +184,7 @@ clear:both;margin:80px auto;width:47.7%;flex-direction:column}
 footer{background:#000;padding:30px 0}
 footer .container{width:100%;max-width:1000px;margin:0 auto}
 .credit{display:flex;justify-content:space-between;align-items:center}
-.darkmode{padding:0 10px;position:relative;background:tomato;padding:16px;z-index:999;border-radius:10px;box-shadow:0 2px 5px 5px 2px rgba(0,0,0,0.2)}
+.darkmode{padding:0 10px;position:relative;background:linear-gradient(rgba(233,25,25,0.4));padding:16px;z-index:999;border-radius:10px;box-shadow:0 2px 5px 5px 2px rgba(0,0,0,0.2)}
 .darkmode-title{font-size:13px;color:#fff}
 .darkmode-title:before{content: "Night Mode";display: inline-block;}
 .togglenight{display:none}
@@ -231,7 +231,7 @@ footer .container{width:100%;max-width:1000px;margin:0 auto}
   .container{padding:0 100px;margin:0 auto;width:100%;box-sizing:border-box}
   .theme-item{height:auto}
   .bars{display:inline-block}
-  .menu-link{position:absolute;top:100px;background:rgba(26,35,126,0.7);left:0;width:100%;box-sizing:border-box;padding:0 80px;z-index:10;overflow:hidden;max-height:0;transition:0.5s ease;-webkit-transition:0.5s ease;display:block}
+  .menu-link{position:absolute;top:100px;background:#d50000;left:0;width:100%;box-sizing:border-box;padding:0 80px;z-index:10;overflow:hidden;max-height:0;transition:0.5s ease;-webkit-transition:0.5s ease;display:block}
   .toggle-menu .menu-link{max-height:25rem}
   .menu-link a{display:block;text-align:left;float:none;height:50px;line-height:50px}
   .menu-link a i{padding:0 10px 0 0;display:inline-block}
