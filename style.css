@@ -184,7 +184,7 @@ clear:both;margin:80px auto;width:47.7%;flex-direction:column}
 footer{background:#000;padding:30px 0}
 footer .container{width:100%;max-width:1000px;margin:0 auto}
 .credit{display:flex;justify-content:space-between;align-items:center}
-.darkmode{padding:0 10px;position:relative;background:linear-gradient(rgba(233,25,25,0.4));padding:16px;z-index:999;border-radius:10px;box-shadow:0 2px 5px 5px 2px rgba(0,0,0,0.2)}
+.darkmode{padding:0 10px;position:relative;background:rgba(233,25,25,0.4);padding:16px;z-index:999;border-radius:10px;box-shadow:0 2px 5px 5px 2px rgba(0,0,0,0.2)}
 .darkmode-title{font-size:13px;color:#fff}
 .darkmode-title:before{content: "Night Mode";display: inline-block;}
 .togglenight{display:none}
