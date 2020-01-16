@@ -229,6 +229,8 @@
       border-radius: 3px;
       margin: 20px 0;
       color: #fff;
-      font-size: 17px
-
+      font-size: 17px;
+      overflow:auto;
+      white-space:nowrap;
     }
+.demo code{}
