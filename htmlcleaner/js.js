@@ -24,7 +24,7 @@ $(document).ready(function(){
     $('.demo-block').prepend('<span class="copy copyblock">COPY</span>');
     $('.text-box').prepend('<span class="copy copycode">COPY</span>');
     $('.copyblock').click(function(){
-      var a = $('<input>')
+      var a = $('<input>');
       $('body').append(a);
       a.val($(this).parent('.demo-block').find('> .content').text()).select();
       document.execCommand('copy');
