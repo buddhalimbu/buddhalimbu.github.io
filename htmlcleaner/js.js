@@ -26,9 +26,10 @@ $(document).ready(function(){
     $('.copyblock').click(function(){
       var a = $('<input>');
       $('body').append(a);
-      a.val($(this).parent('.demo-block').find('> .content').text()).select();
+      a.val($(this).parent('.demo-block').find('> code pre').text()).select();
       document.execCommand('copy');
       alert('TEXT HAS BEEN COPIED');
+	    a.remove();
     });
     //copy
        $('.copycode').click(function(){
