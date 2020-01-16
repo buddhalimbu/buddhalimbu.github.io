@@ -19,6 +19,7 @@ var a = document.getElementById('textarea'),
       g.checked&&(b=b.replace(/>/g,"&gt;")),
       a.value=b,a.focus(),a.select()
 		}
+$(document).ready(function(){
     //jquery code for copy append etc
     $('.demo-block').prepend('<span class="copy copyblock">COPY</span>');
     $('.text-box').prepend('<span class="copy copycode">COPY</span>');
@@ -54,4 +55,5 @@ var a = document.getElementById('textarea'),
         $('#coded').append(a.val());
         $(this).attr('disabled', true).css({'cursor':'no-drop','opacity':'0.5'});
       }
-       })
+       });
+});
