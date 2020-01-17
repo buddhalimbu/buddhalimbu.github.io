@@ -27,11 +27,11 @@ $(window).scroll(function() {
 });
 $(window).scroll(function() {
 	if ($(window).scrollTop() >= 2000) {
-		$('.menu-icon,.themepack').hide(500);
+		$('.menu-icon,.themepack,.date-holder').hide(500);
 		$('.gototop').show(500);
 	}
 	else {
-		$('.menu-icon,.themepack').show(500);
+		$('.menu-icon,.themepack,.date-holder').show(500);
 		$('.gototop').hide(500)
 	}
 });
@@ -89,5 +89,18 @@ function showSlides() {
   dots[slideIndex-1].className += " active";
   setTimeout(showSlides, 2000); // Change image every 2 seconds
 }
+//prepend
+	$('body').prepend('<div class="date-holder"><div id="month"/><div class="time-holder"><span id="hours"/>:<span id="minutes"/></div></div>');
 
+var months = ['January','February','March','May','June','July','August','September','October','Novermber','December'];
+var date = new Date();
+var month = months[date.getMonth()];
+var hour = date.getHours() % 12 || 12 ;
+var minute = date.getMinutes();
+var a = document.getElementById('month');
+var b = document.getElementById('hours');
+var c = document.getElementById('minutes');
+a.innerHTML = month;
+b.innerHTML = hour;
+c.innerHTML = minute;
 });
