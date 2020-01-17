@@ -102,6 +102,11 @@ footer span img{width:180px;height:auto;}
   80%{background:#1f2024;border-style:double;border-color:#0157d9;}
   100%{background:green;border-style:double;border-color:purple;}
 ;}
+.date-holder{position:fixed;top:250px;left:30px;background:rgb(223,222,222);border-radius:0;font-weight:bold;z-index: 666;border-top: 5px solid #d50000}
+.date-holder #month{display:block;padding:8px;background:rgb(231,235,231);border-radius:0;color:#232323!important}
+.time-holder{display:flex;justify-content:center;align-items:center;display:-webkit-flex;background:#232323;color: #fff}
+.time-holder #hours{padding:8px}
+.time-holder #minutes{padding:8px}
 .head{padding:20px 14px;box-sizing:border-box;}
 .head h1{display:block;margin:22px 0;font-size:50px;font-weight:900;text-decoration:none;text-transform:uppercase;color:var(--main-color);}
 .head span{display:inline-block;margin:24px 0;padding:14px 0;border-bottom-width:2px;border-bottom-style:dashed;border-bottom-color:#6C6D92;font-size:24px;font-weight:bold;color:#8a8a8a;}
@@ -322,7 +327,7 @@ footer .container{width:100%;max-width:1000px;margin:0 auto;}
   .resume-box{margin-bottom:40px;}
   .themepack{color:#eee;}
   .themepack button{color:#eee!important;}
-  .menu-icon,.themepack{left:14px;}
+  .menu-icon,.themepack,.date-holder{left:14px;}
 ;}
 @media screen and (max-height:400px){
   .header-wrapper{height:auto;}
