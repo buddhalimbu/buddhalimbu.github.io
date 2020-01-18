@@ -1,0 +1,102 @@
+/*CSS FILE HERE*/
+*{
+margin:0;
+padding:0;
+}
+body,html{
+scroll-behaviour:smooth;
+}
+.sayari{
+font-size:18px;
+font-weight:bold;
+}
+.sayari-wrapper{
+float:left;
+position:relative;
+width:100%;
+max-width:50%;
+display:inline-block;
+height:auto;
+box-sizing:content-box;
+margin-bottom:10px;
+}
+.sayari-box:nth-child(odd){
+clear:both;
+}
+.sayari-box{
+padding:14px;
+margin:16px 20px;
+background:#fff;
+border-top:10px solid #6a1b9a;
+color:#000;
+border-radius:7px;
+box-shadow:0 1px 5px 1px rgba(0,0,0,0.32);
+position:relative;
+}
+.sayari-box .alert{
+position:absolute;
+bottom:-50px;
+right:8px;
+padding:10px;
+border-radius:100px;
+text-transform:uppercase;
+background:#fff;
+box-shadow:0 3px 6px 3px rgba(0,0,0,0.1);
+z-index:55;
+display:none;
+transition:0.5 ease;
+}
+.copy-box{
+display:block;
+position:relative;
+padding:20px 0 10px 0;
+display:flex;
+justify-content:space-between;
+align-content:center;
+align-items:center;
+}
+.copy-box span{
+text-align:center;
+display:flex;
+justify-content:center;
+align-items:center;
+width:100%;
+margin:0 auto;
+cursor:pointer;
+box-sizing:border-box;
+}
+.copy-box span:first-child{
+margin-right:8px;
+}
+.copy-box span:hover{
+background:#311b92;
+transition:0.8s ease-in-out;
+}
+.copy-box span i{
+font-size:20px;padding-right:7px;
+}
+.shareme{
+padding:10px;background:green;color:#fff;border-radius:3px;
+}
+.copyme{
+padding:10px;
+background:#6a1b9a;
+color:#fff;
+border-radius:3px;
+}
+@media screen and (max-width:600px){
+  .sayari-wrapper{
+  float:none;
+  max-width:100%;
+  box-sizing:border-box;
+  margin-bottom:15px;
+  }
+}
+@media screen and (max-width:400px){
+  .copy-box{
+  flex-direction:column;
+  -webkit-flex-direction:column;
+  box-sizing:border-box;}
+  .copy-box span:first-child{
+  margin:0 auto 12px auto;}
+}
