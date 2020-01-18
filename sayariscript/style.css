@@ -1,11 +1,40 @@
 /*CSS FILE HERE*/
-*{
-margin:0;
-padding:0;
-}
-body,html{
-scroll-behaviour:smooth;
-}
+	body {
+		width: 100%;
+		max-width: 900px;
+		margin: 0 auto;
+		box-sizing: border-box;
+		background: #f2f2f2;
+		font-family: monospace;
+	}
+	.box {
+		text-align: center;
+	}
+	.box h1 {
+		font-size: 30px;
+	}
+	.box p {
+		font-size: 24px
+	}
+	.gotohome {
+		margin: 20px 0;
+		padding: 20px
+	}
+	.gotohome a {
+		padding: 10px 14px ;
+		border-radius: 3px;
+		border-style: dashed;
+		border-color: #000;
+		color: #000;
+		text-decoration: none;
+		font-size: 17px
+	}
+	.gotohome a:hover {
+		background: #000;
+		color: #fff;
+		border-style: double;
+		border-color: #323232
+	}
 .sayari{
 font-size:18px;
 font-weight:bold;
@@ -20,7 +49,7 @@ height:auto;
 box-sizing:content-box;
 margin-bottom:10px;
 }
-.sayari-box:nth-child(odd){
+.sayari-wrapper:nth-child(odd){
 clear:both;
 }
 .sayari-box{
