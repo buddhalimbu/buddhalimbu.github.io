@@ -481,31 +481,100 @@ background-position:bottom center;
 	-mox-transform: rotate(0deg);
 	-webkit-transform: rotate(0deg);
 }
-.resume {
-	background: var(--main-color);
-	padding: 40px 0;
-	position: relative;
-	margin-top: 0;
+
+.myresume {
+    background: #505393;
+    padding: 16px 0;
+    width: 100%;
+    box-sizing: border-box;
 }
-.resume .container {width: 100%;max-width: 1000px;margin: 0 auto}
-.resume-item {
-	display: flex;
-	display: -webkit-flex;
-	justify-content: space-between;
-	align-items: center;
-	margin: 30px 0;
+.myresume .container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
 }
-.resume h1 {
-	color: rgba(255,255,255,0.3);
-	padding: 8px 10px;
-	text-transform: uppercase;
-	border-color: rgba(255,255,255,0.3);
-	border-width: 2px;
-	border-style: dashed;
-	font-size: 15px;
-	margin-bottom: 14px;
-	border-radius: 3px;
-	display: inline-block;
+.myresume-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.resume-box {
+    width: 100%;
+    max-width: 50%;
+    height: 310px
+
+}
+.resume-inner {
+    padding: 20px
+}
+.resume-box:nth-child(1){
+    background: rgba(0,0,0,0.035);
+}
+.resume-box:nth-child(2){
+    background: rgba(0,0,0,0.07);
+}
+.resume-box:nth-child(3){
+    background: rgba(0,0,0,0.105);
+}
+.resume-box:nth-child(4){
+    background: rgba(0,0,0,0.14);
+}
+.resume-box:nth-child(5){
+    background: rgba(0,0,0,0.175);
+}
+.resume-box:nth-child(6){
+    background: rgba(0,0,0,0.21);
+}
+.resume-inner {
+    display: flex;
+    display: -webkit-flex;
+    justify-content: space-between;
+    padding: 50px 20px
+}
+.resume-p {
+    color: #d3d4e4;
+    margin-left: 30px;
+    padding-right: 30px
+
+}
+.resume-head {
+    text-align: center;
+}
+.resume-head h1{
+    font-size: 32px;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    padding: 30px 10px 10px 10px;
+    border-bottom-style: dashed;
+    display: inline-block;
+    border-bottom-width: 3px;
+    border-bottom-color: rgba(255,255,255,0.3);
+    color: rgba(255,255,255,0.6);
+}
+
+.resume-head .resume-text {
+    color: rgba(255,255,255,0.6);
+    letter-spacing: 0.02em;
+    font-size: 22px;
+    padding: 40px 20px;
+    display: block;
+    line-height: 1.5em
+}
+.resume-inner h2 {
+    font-size: 30px;
+    text-transform: uppercase;
+}
+.resume-inner span {
+    padding: 0;
+    font-size: 44px;
+    color: #9296e5;
+}
+.resume-p p {
+    padding: 16px 0 0 0;
+    letter-spacing: 0.03em;
+    font-size: 18px;
+    line-height: 1.5em
 }
 .svg-rand-2{
 	  position: absolute;
@@ -514,22 +583,8 @@ background-position:bottom center;
   z-index: 2;
   top: 98%
 }
-.svg-rand-2 svg {fill: var(--main-color);}
-.resume p {
-	margin-bottom: 10px;
-	color: rgba(255,255,255,.3);
-	position: relative;
-}
-.resume p:before{
-	content: "";
-	width: 10px;
-	height: 10px;
-	background: rgba(255,255,255,0.2);
-	border-radius: 50%;
-	-webkit-border-radius:50%;
-	margin-right: 6px;
-	display: inline-block;
-}
+.svg-rand-2 svg {fill: #505393);}
+
 /*others*/
 body .myhead{text-align: center;float: none;margin: 0 auto}
 body .heading {text-align: center;position: relative;font-size: 50px;font-weight: 900;color:#6C6D92;
@@ -851,6 +906,30 @@ background-position: cover;background-repeat: no-repeat center bottom; padding: 
 	body .heading {font-size: 40px}
 	.theme-img img {height: 240px}
 	.content{width:80%;margin: 0}
+}
+@media screen and (max-width: 1000px) {
+    .resume-inner {
+        flex-direction: column;
+        -webkit-flex-direction:column;
+        justify-content: center;
+        align-items: center;
+    }
+    .resume-p {
+        text-align: center;
+        margin: 0 auto;
+        padding: 20px 0
+    }
+}
+@media screen and (max-width: 868px){
+    .myresume-box {
+        justify-content: center;
+        flex-direction: column;
+        -webkit-flex-direction:column;
+        box-sizing: border-box;
+        margin: 0 auto
+    }
+    .resume-box {max-width: 100%;box-sizing: border-box;height: auto;}
+    .resume-inner {width: 100%;box-sizing: border-box;margin: 0 auto;padding: 0 auto}
 }
 
 @media screen and (max-width: 888px) {
