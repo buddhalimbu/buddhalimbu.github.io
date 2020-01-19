@@ -406,20 +406,26 @@ header .follow a:hover {
 }
 @media screen and (max-width: 768px) {
     header{
+	    position:fixed;
+	    left:0;
+	    top:0;
+	    width:100%;
+	    height:100%;
+	    box-sizing:border-box
         
     }
     header .follow a {
-        width: 27px;
-        height: 27px;
-        line-height: 27px;
+        width: 34px;
+        height: 34px;
+        line-height: 34px;
     }
     header .follow a span {
-        font-size: 12px
+        font-size: 14px
     }
     .ct,.sharethis {
-        width: 40px;
-        height: 40px;
-        line-height: 40px
+        width: 44px;
+        height: 44px;
+        line-height: 44px
     }
     .ct span,.sharethis i {
         font-size: 16px
