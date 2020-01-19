@@ -434,14 +434,14 @@ header .follow a:hover {
         left: 12px
     }
     .share-wrapper a {
-        padding: 9px
+        padding: 14px
     }
     .share-wrapper a i {
-        font-size: 14px
+        font-size: 16px
     }
     header main img {
-        width: 180px;
-        height: 180px;
+        width: 210px;
+        height: 210px;
     }
 }
 @media screen and (max-height: 550px){
