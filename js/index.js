@@ -1,50 +1,74 @@
 $(document).ready(function(){
-$('.hobby-item span').wrap('<div class="wrap-span"/>');
-$('.slider').wrap('<div class="wrapper"/>');
-$('.slider q').wrap('<div class="quote-box"/>');
-$('.q').prepend('<span class="fa fa-heart"/>');
-$('.logo')['clone']()['appendTo']('.logo-footer');
-$('.credit').wrap('<div class="container"/>');
-$('.demo a').wrap('<button class="demo-button"/>');
-$('.image-wrapper').append('<div class="myname"><span class="greet">Welcome</span><h1>Buddha</p></div>');
-
-//add class to menu-link a that when user clicks on it the body will animate
-$('.topnav a')['addClass']('scroll-menu');
-$('.topnav').prepend('<span class="fa fa-times"></span>');
-//create sticky navbar on scroll 
-$(window).scroll(function() {
-	if ($(window).scrollTop() >= 10) {
-		$('.navbar').addClass('sticky');
-		$('.menu-icon .fa-bars').css({'background':'#1B2631'})
-		$('.nightmode').css({'background':'#B5AD07'});
-		$('.themepack').css({'background':'#1B2631'});
-	}
-	else {
-		$('.navbar').removeClass('sticky');
-		$('.menu-icon .fa-bars').css({'background':'rgba(255,255,255,0.06'});
-		$('.nightmode,.themepack').css({'background':'rgba(255,255,255,0.06'})
-	}
-});
-$(window).scroll(function() {
-	if ($(window).scrollTop() >= 2000) {
-		$('.menu-icon,.themepack,.date-holder').hide(500);
-		$('.gototop').show(500);
-	}
-	else {
-		$('.menu-icon,.themepack,.date-holder').show(500);
-		$('.gototop').hide(500)
-	}
-});
-//create animated click and goto
-$('.topnav a').click(function(){
-	e.preventDefault();
-	$('body,html').animate({
-	scrollTop: $(this.hash).offset().top
-      }, 5000);
+	//hobby item
+	$('body').each(function(){
+		$(this).prepend('<div class="date-holder"><div id="month"/><div class="time-holder"><span id="hours"/>:<span id="minutes"/></div></div>');
+	})
+	$('.hobby-item').each(function(){
+		$(this).find('> span').wrap('<div click="wrap-span"/>');
 	});
-$('.menu-icon,.fa-times').click(function(){
-	$('body').toggleClass('togglenav');
-})
+	//credit wrapping
+	$('footer').each(function(){
+		$(this).children('.credit').wrap('<div class="container"/>');
+	});
+	//demo wrap a tag
+	$('.demo').each(function(){
+		$(this).children('a').wrap('<button class="demo-button"/>');
+	});
+	//wrap content in image-wrapper
+	$('.image-holder').each(function(){
+       $(this).parent('.image-wrapper').append('<div class="myname"><span class="greet">Welcome</span><h1>Buddha</p></div>');
+	});
+	//topnav
+	$('.topnav').each(function(){
+		$(this).prepend('<span class="fa fa-times"/>');
+	    $('this a').click(function(){
+		$('body,html').animate({
+			scrollTop : $(this.hash).offset.top
+		},5000);
+	    });
+	    $('.fa-times,.menu-icon').click(function(){
+	    	$('body').toggleClass('togglenav');
+	    })
+    });
+    $('.heading').each(function(){
+    	$(this).wrap('<div class="myhead"/>');
+    })
+    //scroll function
+    $(window).scroll(function(){
+    	var menu = $('.menu-icon');
+    	var a = $('.fa-bars');
+    	var b = $('.nightmode');
+    	var c = $('.themepack');
+    	var d = $('.gototop');
+    	var e = $('.date-holder');
+    	var nav = $('.nav');
+    	if($(this).scrollTop() >= 2000){
+    		menu.hide(500);
+    		b.hide(500);
+    		c.hide(500);
+    		d.show(200);
+    		e.hide(500)
+    		nav.hide(500);
+    	}
+    	else if ($(this).scrollTop() >=10){
+    		a.css({'background':'#1B2631'});
+    		b.css({'background':'#B5AD07'});
+    		c.css({'background':'#1B2631'});
+    	}
+    	else
+    	{
+    		menu.show(500);
+    		b.show(500);
+    		c.show(500);
+    		d.hide(200);
+    		e.show(500);
+    		nav.show(500);
+    		a.css({'background':'rgba(255,255,255,0.06)'});
+    		b.css({'background':'rgba(255,255,255,0.06)'});
+    		c.css({'background':'rgba(255,255,255,0.06)'});
+
+    	}
+    })
 //mailto function on click Gmail
 $(function () {
   $('.send').on('click', function (event) {
@@ -55,17 +79,25 @@ $(function () {
     window.location = 'mailto:' + email + '?subject=' + subject + '&body=' +   msg;
   });
 });
+//share on facebook
 $('.btn1').click(function(){
 	var title = document.location.origin;
 	var open = "http://www.facebook.com/sharer/sharer.php?u=" + title;
 	window.open(open, "_blank");
 })
+//share on whatsapp
 $('.btn2').click(function(){
 	var title = document.location.origin;
 	var msg = 'Buddha Limbu Portfolio Site';
 	var all = "https://api.whatsapp.com/send?text=" + msg + " - " + title;
 	window.open(all,"_blank");
-})
+});
+$('.tw').click(function(){
+	var title = 'https://buddhalimbu.github.io';
+	var msg = ' My Portfolio Website';
+	var link = "https://twitter.com/intent/tweet?url=" + title + "&text=" + msg + " - ";
+	window.open(link,"_blank");
+});
 //dark mode
 $(document).ready(function(){
 	$("#nightmode").click(function(){$("body").toggleClass("darktheme")}),$("body").toggleClass(localStorage.toggled),$("#nightmode").click(function(){"darktheme"!=localStorage.toggled?($("body").toggleClass("darktheme",!0),localStorage.toggled="darktheme"):($("body").toggleClass("darktheme",!1),localStorage.toggled="")});});
@@ -87,11 +119,9 @@ function showSlides() {
   }
   slides[slideIndex-1].style.display = "block";  
   dots[slideIndex-1].className += " active";
-  setTimeout(showSlides, 2000); // Change image every 2 seconds
+  setTimeout(showSlides, 5000); // Change image every 2 seconds
 }
-//prepend
-	$('body').prepend('<div class="date-holder"><div id="month"/><div class="time-holder"><span id="hours"/>:<span id="minutes"/></div></div>');
-
+//date and time
 var months = ['January','February','March','May','June','July','August','September','October','Novermber','December'];
 var date = new Date();
 var month = months[date.getMonth()];
