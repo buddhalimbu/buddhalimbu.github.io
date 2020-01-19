@@ -584,7 +584,7 @@ background-position:bottom center;
   z-index: 2;
   top: 98%
 }
-.svg-rand-2 svg {fill: #505393);}
+.svg-rand-2 svg {fill: #505393}
 
 /*others*/
 body .myhead{text-align: center;float: none;margin: 0 auto}
@@ -960,6 +960,7 @@ background-position: cover;background-repeat: no-repeat center bottom; padding: 
 }
 @media screen and (max-width: 780px){
 	.container {padding: 0 20px}
+	.myresume .container {padding:0!important}
 	.theme-img img {}
 	.name h1 {font-size:40px}
 	.topnav{}
