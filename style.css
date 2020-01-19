@@ -909,6 +909,7 @@ background-position: cover;background-repeat: no-repeat center bottom; padding: 
 	.content{width:80%;margin: 0}
 }
 @media screen and (max-width: 1000px) {
+	.resume-box {height:330px}
     .resume-inner {
         flex-direction: column;
         -webkit-flex-direction:column;
