@@ -1,4 +1,5 @@
-
+//functions
+$(document).ready(function(){
 $('.ct').click(function(){
     $('body').toggleClass('togglecontact');
 });
@@ -40,4 +41,5 @@ $('#pin').click(function(){
 $('#fb').click(function(){
     link = 'https://api.whatsapp.com/send?text=' + title;
     window.open(link,"_blank");
+});
 });
