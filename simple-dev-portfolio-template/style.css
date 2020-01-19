@@ -11,15 +11,21 @@
     --teel-dark:#084b47;
 }
 *{
-    margin: 0;
-    padding: 0;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	-webkit-box-sizing:border-box;
+	-ms-box-sizing:border-box;
+	-moz-box-sizing:border-box;
 }
-body {
-    padding: 0;
-    margin:0;
-    box-sizing: border-box;
-    font-family: 'Montserrat',sans-serif;
-    overflow-x: hidden;
+body,html {
+	margin: 0 auto;
+	padding: 0;
+	overflow-x: hidden;
+	font-family: 'Montserrat',sans-serif;
+	letter-spacing:normal;
+	font-size: 16px;
+	scroll-behavior: smooth;
 }
 .overlay{
     position: fixed;
@@ -40,7 +46,7 @@ body {
 }
 header {
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     padding: 0;
     margin: 0;
     background: var(--main-color);
@@ -51,6 +57,7 @@ header {
     justify-content: center;
     align-items: center;
     text-align: center;
+  box-sizing:border-box
 }
 main {
 
