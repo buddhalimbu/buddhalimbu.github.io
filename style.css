@@ -606,13 +606,13 @@ justify-content: center;align-items: center;flex-direction: column;-webkit-flex-
 .item .box span {font-size: 40px;height: 160px;width: auto;line-height: 160px;width: 100%;box-sizing: border-box;
 	background: #;margin: 0 auto;width: 94%;margin-top: -100px;border-radius: 7px;position: relative;z-index: 23;
 text-align: center;color: #7a7a7a}
-.item .box h3{padding: 14px;font-size: 22px;text-transform: uppercase;color: #2C2D5E;padding: 10px;border-radius: 3px;
-border-color: #2C2D5E;border-width: 2px;border-style: dashed;transition: 0.8s;cursor: pointer;}
+.item .box h3{padding: 14px;font-size: 22px;text-transform: uppercase;color: rgba(255,255,255,0.4);padding: 10px;border-radius: 3px;
+border-color:  rgba(255,255,255,0.4);border-width: 2px;border-style: dashed;transition: 0.8s;cursor: pointer;}
 .item .box h3:hover {border-style: double;border-color: #eee;color: #eee}
 .item .box span i {background: var(--main-color);padding: 0;height: 110px;width: 110px;line-height: 110px;transition: 0.8s ease;
 	text-align: center; border-radius: 50%;-webkit-border-radius:50%;border-color: #6C6D92;border-width: 2px;border-style: dashed;cursor: pointer;}
 .item .box span i:hover {border-color: #eee;border-style: double;color: #eee;border-width: 5px}
-.item .box p {padding: 20px;text-align: center;color: #6C6D92;border-radius: 4px; display: block;width: 100%;box-sizing: border-box;}
+.item .box p {padding: 20px;text-align: center;color:  rgba(255,255,255,0.3);border-radius: 4px; display: block;width: 100%;box-sizing: border-box;}
 
 /*about me*/
 .about-me {background: #fff;padding: 26px 0;clip-path: polygon(0 0,100% 0, 100% 100%,0 calc(100% - 0px));height: auto;
@@ -991,10 +991,20 @@ background-position: cover;background-repeat: no-repeat center bottom; padding: 
 		text-align: center;
 	}
 	.resume-box {
-		margin-bottom: 40px
+		margin-bottom: 0px
 	}
 	.themepack{color: #eee}
 	.themepack button {color: #eee!important}
 	.menu-icon,.themepack,.date-holder{left: 14px}
 }
+@media screen and (max-width:500px){
+	.theme-img img{width:180px}
+	.theme-content h3{font-size:24px}
+	.theme-content p{font-size:14px}
+	.head h1{font-size:30px;margin:5px auto}
+	.head span{font-size:17px}
+	.head p {font-size:13px}
+	.social-box li a:after {transform:rotate(0deg);-webkit-transform:rotate(0deg)}
+}
+	
 
