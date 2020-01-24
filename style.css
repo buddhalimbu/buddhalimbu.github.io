@@ -998,7 +998,7 @@ background-position: cover;background-repeat: no-repeat center bottom; padding: 
 	.menu-icon,.themepack,.date-holder{left: 14px}
 }
 @media screen and (max-width:500px){
-	.theme-img img{width:180px}
+	.theme-img img{height:180px}
 	.theme-content h3{font-size:24px}
 	.theme-content p{font-size:14px}
 	.head h1{font-size:30px;margin:5px auto}
