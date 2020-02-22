@@ -1,5 +1,5 @@
 *,*:after,*:before{margin:0;padding:0;box-sizing:border-box;-ms-box-sizing:border-box;-moz-box-sizing:border-box;-o-box-sizing:border-box;-webkit-box-sizing:border-box}
-body{padding:0;margin:0;overflow-x:hidden;font-family:'Montserrat',sans-serif;background:#f3f3f3;background-image:linear-gradient(rgba(255,255,255,0.3),rgba(255,255,255,01)),url('bg.png');background-attachment:fixed;background-repeat:no-repeat;background-position:center;background-size:cover}
+body{padding:0;margin:0;overflow-x:hidden;font-family:'Montserrat',sans-serif;background:#f3f3f3;background-image:linear-gradient(rgba(255,255,255,0.3),rgba(255,255,255,01)),url('image/bg.png');background-attachment:fixed;background-repeat:no-repeat;background-position:center;background-size:cover}
 body .box-shadow{box-shadow:0 6px 12px 6px rgba(0,0,0,0.05)}
 body a{text-decoration:none}
 body .hov-bg a:hover{background:#d50000;color:#fff}
@@ -302,7 +302,7 @@ body ul,body ol{list-style:none}
 }
 .about-me{margin:40px 0;position:relative}
 .about-wrapper{display:flex;display:-webkit-flex;display:-ms-flex;display:-o-flex;display:-moz-flex;justify-content:space-between;-webkit-justify-content:space-between;-ms-justify-content:space-between;-moz-justify-content:space-between;-o-justify-content:space-between;background:#fff;border-radius:8px}
-.author-img{padding:20px;background:linear-gradient(rgba(29,144,234,0.2),rgba(29,144,234,1)),url(author.jpg);background-attachment:inherit;background-position:center;background-repeat:no-repeat;background-size:contain;width:30%;height:300px;border-top-left-radius:8px;border-bottom-left-radius:8px}
+.author-img{padding:20px;background:linear-gradient(rgba(29,144,234,0.2),rgba(29,144,234,1)),url(image/author.jpg);background-attachment:inherit;background-position:center;background-repeat:no-repeat;background-size:contain;width:30%;height:300px;border-top-left-radius:8px;border-bottom-left-radius:8px}
 .about-author{padding:20px;width:70%;position:relative;overflow:hidden}
 .about-author:after{content:"";background:rgba(29,144,234,0.08);display:block;height:100%;position:absolute;top:0;width:100%;transform:skewY(-45deg);-webkit-transform:skewY(-45deg);-ms-transform:skewY(-45deg);-moz-transform:skewY(-45deg);-o-transform:skewY(-45deg);right:-50%}
 .author-content h2{font-size:22px;padding:12px;text-transform:capitalize;letter-spacing:0.3em;background-color:#1d90ea;margin-bottom:20px;color:#fff;position:relative;display:inline-block}
