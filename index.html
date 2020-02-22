@@ -99,149 +99,223 @@
   <script src="js/index.js"></script>
   <meta name="google-site-verification" content="8Ix9vDqLreqaJIgYHy47jtHvzoxSL43OnA-f3XurWHQ" />
 </head>
-<body>
-<!--share mode-->
-<div class="themepack">
-  <button class="btn1"><i class="fab fa-facebook"></i> Share</button>
-  <button class="btn2"><i class="fab fa-whatsapp"></i> Share</button>
-  <button class="tw"><i class="fab fa-twitter"></i> Share</button>
+<body id="body">
+	<div class='loader'>
+<div class='loader-item'>
+<div class='overlayloader'></div>
 </div>
-<div class="menu-icon">
-  <span class="fa fa-bars" id="bars"></span>
 </div>
-<div class="nav">
-  <div class="topnav">
-            <a href="/"><i class="fa fa-home"></i> Home</a>
-            <a href="#contact"><i class="fa fa-tty"></i> contact</a>
-            <a href="#skill"><i class="fa fa-laptop"></i> Coding</a>
-            <a href="#theme"><i class="fab fa-blogger-b"></i> BLogger</a>
-            <a href="#resume"><i class="fa fa-user"></i> about</a>
-          </div>
-        </div>
-
-  <div class="main-header">
-  <div class="header dark-main-bg" id="header">
-       <div class='svg'>
-                <svg viewBox='0 186.5 1920 113.5' x='0px' y='0px'>
-                    <polygon points='-30,300 355.167,210.5 1432.5,290 1920,198.5 1920,300'/>
-                </svg>
-            </div> 
+<!--start header , navigation and search and other stuff-->
+<div class="lim-header">
+	<!--all input checkbox for all toggle menu search etc-->
+	<div class="lim-width">
+		<div class="lim-container">
+			<div class="lim-topnav">
+				<input type="checkbox" id="lim-tog-menu"/>
+				<label for="lim-tog-menu" class="tog-menu"></label>
+				<div class="overlay lim-ts"></div>
+				<div class="lim-logo">
+					<img src="mylogo.png" class="lim-animate lim-ts lim-bounceleft" />
+					<h1 class="lim-name lim-ts lim-animate lim-bounceright">Buddha</h1>
+					<!--animatio-->
+					
+				</div>
+					<div class="lim-menu lim-ts lim-animate lim-bouncein">
+						<ul>
+							<li><a href="#body">Home</a></li>
+						<li><a href="#about">about</a></li>
+						<li><a href="#contact">contact</a></li>
+						<li><a href="#skill">skills</a></li>
+						<li><a href="#work">work</a></li>
+						<li><a href="#theme">theme</a></li>
+					</ul>
+					</div>
+					<div class="lim-right">
+					<input type="checkbox" id="lim-tog-search"/>
+					<label for="lim-tog-search" class="tog-search lim-bounceright"></label>
+				<!--search box-->
+				<div class="lim-search lim-ts box-shadow lim-animate lim-bouncein">
+					<div class="lim-form hov-bg lim-ts">
+						<a class="fb"><i class="fab fa-facebook"></i></a>
+						<a class="tw"><i class="fab fa-twitter"></i></a>
+						<a class="wa"><i class="fab fa-whatsapp"></i></a>
+						<a class="ln"><i class="fab fa-linkedin"></i></a>
+						<a class="pin"><i class="fab fa-pinterest"></i></a>
+						</div>
+				</div>
+			</div>
+		</div>
 </div>
-<div class="main">
-        <div class="content dark-bg">
-          <div class="image-wrapper">
-            <div class="image-holder">
-            <img src="image/buddha.jpg"/>
-          </div>
-              <div class='svg'>
-                <svg viewBox='0 186.5 1920 113.5' x='0px' y='0px'>
-                    <polygon points='-30,300 355.167,210.5 1432.5,290 1920,198.5 1920,300'/>
-                </svg>
-            </div>
-          </div>
-          <div class="head">
-            <h1 class="dark-text">Buddha Limbu</h1>
-            <span class="dark-text">Web developer and blogger theme designer.</span>
-            <p class="dark-text">
-             Hi, I'm Buddha Limbu & I'm a passionate Front-End Web Developer. I've good knowledge of HTML, CSS & JQUERY.<br/><br/>
-          Apart from this, I'm a Blogger Template Desinger & I've designed Blogger Template. I badly prefer to create landing pages & portfolio.
-            </p>
-          </div>
-          <div class="follow">
-            <ul class="social-wrap social-color-link social-box">
-              <li class="facebook">
-                <a href=""></a>
-              </li>
-              <li class="codepen">
-                <a href=""></a>
-              </li>
-              <li class="stack-overflow">
-                <a href=""></a>
-              </li> 
-              <li class="dribbble">
-                <a href=""></a>
-              </li>
-                <li class="twitter">
-                <a href=""></a>
-              </li>
-              <li class="github">
-                <a href=""></a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
+</div>
+</div>
+<!--div blocks-->
+<div class='div-block'>
+  <span class='block-b'></span>
+  <span class='block-c'></span>
+<div class='lim-width'>
+<div class='files'>
+  <h1 class="lim-animate lim-fadeindown">PASSIONATE FRONT-END
+WEB DEVELOPER AND BLOOGER THEME DEV.</h1>
+  <p class="lim-animate lim-bouncein"><data:blog.title/> I'm a self learnt passionate front-end web developer.</p>
+<div class='div-more'>
+  <a href='' class='lim-ts lim-animate lim-moveup'>Learn More</a>
   </div>
-
-  <div class="clear"></div>
-    
-<!--other side-->
-<div class='item' id="skill">
-  <div class="container">
-    <div class="item-wrapper">
-      <div class="box">
-        <span><i class="fab fa-html5"></i></span>
-        <h3>HTML/CSS</h3>
-        <p>I have good knowledge of HTML & CSS and learnt  it form W3schools.</p>
-      </div>
-      <div class="box">
-        <span><i class="fab fa-js"></i></span>
-        <h3>JQUERY</h3>
-        <p>I only know the basic of javaScript and jQuery and i'm learning it in best way.</p>
-      </div>
-      <div class="box">
-        <span><i class="fa fa-leaf"></i></span>
-        <h3>Logo Design</h3>
-        <p>I design logo and do some graphics works such as vector art.</p>
-      </div>
-    </div>
   </div>
+  </div>
+  </div>
+<!-- <div class='temp-download lim-animate lim-bounceleft'>
+  <p>Download this template right now.</p>
+  <a href='' class='lim-ts'>Download Now</a>
+</div> -->
+  <div class='clear'></div>
+<!--skill boxes-->
+<div style="background: #f3f3f3;padding: 20px 0">
+<div class="skill-box" id="skill">
+	<div class="lim-width">
+		<div class="skill-box-wrapper">
+			<div class="b-box box-shadow lim-animate lim-bounceleft">
+				<div class="b-child">
+				<h2 class="lim-animate lim-ts lim-fadeindown">HTML</h2>
+				<p><i class="fab fa-html5"></i></p>
+				</div>
+				<div class="content-p">
+					<p>
+						I have good knowledge of HTML & CSS and learnt it form W3schools.
+					</p>
+				</div>
+			</div>
+			<div class="b-box box-shadow lim-animate lim-moveup">
+				<div class="b-child">
+				<h2 class="lim-animate lim-ts lim-fadeindown">CSS</h2>
+				<p><i class="fab fa-js"></i></p>
+				</div>
+				<div class="content-p">
+					<p>
+						I only know the basic of javaScript and jQuery and i'm learning it in best way.
+					</p>
+				</div>
+			</div>
+			<div class="b-box box-shadow lim-animate lim-bounceright">
+				<div class="b-child">
+				<h2 class="lim-animate lim-ts lim-fadeindown">JQUERY</h2>
+				<p><i class="fas fa-burn"></i></p>
+				</div>
+				<div class="content-p">
+					<p>
+						I design logo and do some graphics works such as vector art.
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
-<div class="clear"/>
-<div class="slide-item">
-  <div class="slideshow-container">
-<div class="myslider fade">
-<p> Don't feel dull to code if you stop practising or resivsing your probabaly forgot what you did in the past.</p>
-  <div class="text">BUDDHA LIMBU</div>
-</div>
-<div class="myslider fade">
-<p>When you code make plenty of mistakes and solve it yourself , it increases the motion of your learning journey.</p>
-  <div class="text">BUDDHA LIMBU</div>
-</div>
-<div class="myslider fade">
-<p> I love coding and i prefer to do coding , I have bad addiction into it.</p>
-  <div class="text">BUDDHA LIMBU</div>
-</div>
-<div class="myslider fade">
-<p>First learn and gather the ideas don't focus on money , when you have creative ideas and technique good things come behind you.</p>
-  <div class="text">BUDDHA LIMBU</div>
-</div>
-<div class="myslider fade">
-<p> Don't afraid to code and don't panic whenever you encounter issue because mistakes give you clue always.</p>
-  <div class="text">BUDDHA LIMBU</div>
-</div>
-</div>
-<br/>
-<div class="d-g">
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-    <span class="dot"></span> 
-  <span class="dot"></span> 
+<!--about me-->
+<div class="about-me" id="about">
+	<div class="lim-width">
+		<div class="about-wrapper box-shadow">
+			<div class="author-img lim-animate lim-ts lim-fadeindown">
+			</div>
+			<div class="about-author lim-ts lim-animate lim-moveup">
+				<div class="author-content">
+					<h2>Buddha Limbu</h2>
+					<p class="lim-ts lim-animate lim-bouncein">
+						Hi, I'm Buddha Limbu & I'm a passionate Front-End Web Developer. I've good knowledge of HTML, CSS & JQUERY.<br/>
+
+Apart from this, I'm a Blogger Template Desinger & I've designed Blogger Template. I badly prefer to create landing pages & portfolio
+					</p>
+				</div>
+				<div class="author-social lim-ts lim-animate lim-bounceright hov-bg">
+					<a href=""><i class="fab fa-facebook"></i></a>
+					<a href=""><i class="fab fa-twitter"></i></a>
+					<a href=""><i class="fab fa-github"></i></a>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
 </div>
-<div class="clear"/>
-<div class="myresume">
-    <div class="container">
+<!--itmitit-->
+<div class="ini">
+	<div class="container">
+
+
+</div>
+</div>
+
+<!--skills-->
+<div class="concept" id="work">
+	<div class="lim-width">
+
+			<h1>My Work</h1>
+		<div class="concept-wrapper">
+			<div class="concept-item lim-ts lim-animate lim-bounceleft">
+					<span class="tag">#Illustrator</span>
+				<div class="laxa">
+					<img src="demo1.jpg"/>
+				</div>
+				<div class="ii">
+				<h2>Tony Stark</h2>
+				<p>
+					This is made on illustrator pen tool. This ain't good though this is best i did on illustrator.
+				</p>
+			</div>
+			</div>
+			<div class="concept-item lim-ts lim-animate lim-bounceright">
+				<span class="tag">#Illustrator</span>
+				<div class="laxa">
+					<img src="demo2.jpg"/>
+				</div>
+				<div class="ii">
+				<h2>King Birendra</h2>
+				<p>
+					King Birendra Bir Bikram Shah made on illustrator. This was an art by someone i just colored it.
+				</p>
+			</div>
+			</div>
+			<div class="concept-item lim-ts lim-animate lim-bouncein">
+				<span class="tag">#Art Design</span>
+				<div class="laxa">
+					<img src="demo3.jpg"/>
+				</div>
+				<div class="ii">
+				<h2>Night Scene</h2>
+				<p>
+					This is made on illustrator using pen tool. All the concept was come from image found i Clicked.
+				</p>
+			</div>
+			</div>
+			<div class="concept-item lim-ts lim-animate lim-moveup">
+				<span class="tag">#Pyramid </span>
+				<div class="laxa">
+					<img src="demo4.jpg"/>
+				</div>
+				<div class="ii">
+				<h2>Pyramid</h2>
+				<p>
+					This is drew on illustrator usin pen tool , the idea i learnt in the youtube tutorials.
+				</p>
+			</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="myresume" id="resume">
+	 <!-- <div class='svg-top'>
+                <svg viewBox="0 186.5 1920 113.5" x="0px" y="0px">
+                    <polygon points="-30,300 355.167,210.5 1432.5,290 1920,198.5 1920,300"></polygon>
+                </svg>
+            </div> -->
+    <div class="lim-width">
         <div class="resume-head">
-        <h1>My Resume</h1>
-        <p class="resume-text">
-            I'm a passionate Front-End Web Developer & Apart from this I have my skills,Hobbies, and my academic qualification which are narrated below.
+        <h1 class="lim-animate lim-ts lim-bouncein">My Resume</h1>
+        <p class="resume-text lim-animate lim-ts lim-moveup">
+            <span class="span-big lim-animate lim-ts lim-bouncein"> I'm</span> a passionate and self-learnt Front-End Web Developer & I don't own any professinal certificate but I'm sure i can do more than professional.
         </p>
     </div>
-    <div class="myresume-box">
-        <div class="resume-box">
+    <div class="myresume-box lim-animate lim-ts lim-fadeindown">
+        <div class="resume-box box-shadow">
             <div class="resume-inner">
             <span class="fa fa-code"></span>
             <div class="resume-p">
@@ -252,7 +326,7 @@
             </div>
         </div>
     </div>
-        <div class="resume-box">
+        <div class="resume-box box-shadow lim-ts lim-animate lim-bouncein">
             <div class="resume-inner">
             <span class="fa fa-laptop"></span>
             <div class="resume-p">
@@ -263,7 +337,7 @@
             </div>
         </div>
     </div>
-        <div class="resume-box">
+        <div class="resume-box box-shadow lim-ts lim-animate lim-bouncein">
             <div class="resume-inner">
             <span class="fa fa-graduation-cap"></span>
             <div class="resume-p">
@@ -274,7 +348,7 @@
             </div>
         </div>
     </div>
-        <div class="resume-box">
+        <div class="resume-box box-shadow lim-ts lim-animate lim-bounceright">
             <div class="resume-inner">
             <span class="fa fa-globe"></span>
             <div class="resume-p">
@@ -285,163 +359,95 @@
             </div>
         </div>
     </div>
-        <div class="resume-box">
-            <div class="resume-inner">
-            <span class="fa fa-bed"></span>
-            <div class="resume-p">
-                <h2>Hobbies</h2>
-                <p>
-                I admire to sing a song and play the guitar very much. In my leisure time I play guitar and travel news places, Specailly I like hilly region to travel.
-            </p>
-            </div>
-        </div>
-    </div>
-        <div class="resume-box">
-            <div class="resume-inner">
-            <span class="fa fa-umbrella"></span>
-            <div class="resume-p">
-                <h2>Family</h2>
-                <p>
-                I live with my family, I have total 4 family members including me. My father , Mother , Elder brother and Me. 
-            </p>
-            </div>
-            </div>
-        </div>
-    </div>
-         <div class='svg-rand-2'>
-                  <svg viewBox='0 186.5 1920 113.5' x='0px' y='0px'>
-                    <polygon points='-30,300 30.167,100.5 0,20 900,20.5 2800,30'/>
-                  </svg>
-            </div>
-    </div>
-</div>
-<h1 class="heading">THEME I MADE</h1>
-<div class="theme" id="theme">
-  <div class="container">
-    <div class="theme-wrapper">
-      <div class="theme-item">
-        <div class="theme-img">
-          <img src="image/helify.png" class="odd-image">
-        </div>
-        <div class="theme-content">
-          <h3>Helif Template</h3>
-          <p>Helify is very responsive blogger template made on 2018. It fast and single column layout with featured posts widget and sticky navbar.</p>
-          <div class="demo">
-            <a href="https://helify-template.blogspot.com">Demo</a>
-          </div>
-        </div>
-      </div>
-      <div class="theme-item">
-        <div class="theme-img">
-          <img src="image/helif-lite.png" class="odd-image">
-        </div>
-        <div class="theme-content">
-          <h3>Helif Lite</h3>
-          <p>Helif Lite is blogger responsive template by Limbu, which has responsive design and based on layout version 2.</p>
-          <div class="demo">
-            <a href="https://helif-lite.blogspot.com">Demo</a>
-          </div>
-        </div>
-      </div>
-      <div class="theme-item">
-        <div class="theme-img">
-          <img src="image/sayari.png" class="odd-image">
-        </div>
-        <div class="theme-content">
-          <h3>Sayari Grid</h3>
-          <p>Sayari Grid is template for sayari website in blogger, it has responsive and fast loading with sayari copy and share on whatsapp script.</p>
-          <div class="demo">
-            <a href="https://sayari-grid.blogspot.com">Demo</a>
-          </div>
-        </div>
-      </div>
-      <div class="theme-item">
-        <div class="theme-img">
-          <img src="image/magzine.png" class="odd-image">
-        </div>
-        <div class="theme-content">
-          <h3>Magzine</h3>
-          <p>Magzine is responsive template which is very clean , it has no footer widget and no featured posts widget.</p>
-          <div class="demo">
-            <a href="https://magzine-theme.blogspot.com">Demo</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
-<div class="clear"/>
-<div class="hobby">
-   <div class="svg-rand-1">
-                  <svg viewBox='0 186.5 1920 113.5' x='0px' y='0px'>
-                    <polygon points='-30,300 300.167,800.5 0,290 90,198.5 1420,300'/>
-                </svg>
-            </div>
-  <div class="container">
-    <div class="hobby-wrapper">
-      <div class="h-b">
-      <div class="hobby-item">
-        <span class="fa fa-code"></span>
-        <div class="hobby-head">
-          <h3>Coding</h3>
-        <p>I love coding since i joined the computer language training online. I found it very intresting and i loved it.</p>
-      </div>
-    </div>
-      <div class="hobby-item">
-        <span class="fa fa-music"></span>
-        <div class="hobby-head">
-          <h3>Playing Guitar</h3>
-        <p>I love playing guitar and i can play the guitar well , i have some vidoes uploaded in youtube :D.</p>
-      </div>
-    </div>
-      <div class="hobby-item">
-        <span class="fa fa-plane"></span>
-        <div class="hobby-head">
-          <h3>Travelling</h3>
-        <p>I prefer to visit tempting places mostly i like to visit hilly region to travel.</p>
-      </div>
-    </div>
-      <div class="hobby-item">
-        <span class="fa fa-headphones"></span>
-        <div class="hobby-head">
-          <h3>Listen Music and Singing</h3>
-        <p>I like singing and playing music , I prefer mostly to sing in guitar rythms.</p>
-      </div>
-    </div>
-  </div>
-      <img src="image/author.jpg"/ class="me">
-    </div>
 
-  </div>
-   <div class='svg'>
-                <svg viewBox='0 186.5 1920 113.5' x='0px' y='0px'>
-                    <polygon points='-30,300 355.167,210.5 1432.5,290 1920,198.5 1920,300'/>
-                </svg>
-            </div>
+        </div>
+    </div>
+</div>
+<!--theme pack-->
+<div class="theme" id="theme">
+	<div class="theme-wrapper">
+		<div class="section1 dim1 lim-ts lim-animate lim-bouncein">
+			<div class="sec-img">
+				<img src="sayari.png"/>
+			</div>
+			<div class="sec-content lim-ts lim-animate lim-bounceright">
+				<h2>Sayari-Grid</h2>
+				<p>
+
+				Sayari Grid is the blogger template for sayari or lyrics website. It has built-in featured that you can copy and share your most favriote sayari with your friends in one click. Apart from this it has responsive layout and it is user friendly with featured posts widget. This theme was created in 2019-jan-22. It is based on layout v2.
+				</p>
+			</div>
+		</div>
+		<div class="section1 dim2 lim-ts lim-animate lim-bounceright">
+			<div class="sec-content lim-fadeindown lim-ts lim-animate">
+				<h2>Helif-Lite</h2>
+				<p>
+					Helif-Lite is similar theme of Sayari-Grid and it has similar features. It has same featured posts and addictional it has news ticker with responsive layout. Apart from this , this has unique feature that you can use insert any ads inside the posts using layout.
+				</p>
+			</div>
+			<div class="sec-img">
+				<img src="helif-lite.png"/>
+			</div>
+		</div>
+		<div class="section1 dim3 lim-ts lim-animate lim-bounceleft">
+			<div class="sec-img">
+				<img src="magzine.png"/>
+			</div>
+			<div class="sec-content lim-ts lim-animate lim-bounceright">
+				<h2>Magzine</h2>
+				<p>
+					Magzine is very old blogger template based on layout version b2. It has unique feature with top search bar and news ticker on the top with thumbnails. It has ad ready and responsive feature. It has ad widget in sidebar and two widget in homepage. 
+				</p>
+			</div>
+		</div>
+	</div>
 </div>
 <div class="clear"></div>
+<!--label-->
+<div class="label">
+	<div class="lim-width">
+		<div class="label-wrapper">
+			<div class="label-item">
+				<div class="label-box">
+					<ul class="flex-label">
+					<li class="lim-ts lim-animate lim-bouncein"><h2>Coding</h2><p>I love coding since I started and involve in this field. I like badly prefer to design HTML template.</p></li>
+					<li class="lim-ts lim-animate lim-bouncein"><h2>Singing</h2><p>I have passion on singing , In my luisure time I always records songs.</p></li>
+					<li class="lim-ts lim-animate lim-bouncein"><h2>Play Guitar</h2><p>I have interested in music, I have some covers uploaded in YT. :D</p></li>
+					<li class="lim-ts lim-animate lim-bounceleft"><h2>Travel</h2><p>I prefer visiting new place, Mostly i visite hilly regions.</p></li>
+					<li class="lim-ts lim-animate lim-bounceright"><h2>Movies</h2><p>I prefer watching movies specially i like the horror movies a lot.</p></li>
+					<li class="lim-ts lim-animate lim-bounceleft"><h2>Songs</h2><p>I mostly prefer to listen sentimantal songs english or my native languages.</p></li>
+					<li class="lim-ts lim-animate lim-bounceright"><h2>Theme Dev</h2><p>I have desinged more 6 themes for blogger using my own skillset.</p></li>
+					<li class="lim-ts lim-animate lim-bounceleft"><h2>Photoshop</h2><p>I have knowledge of PS CS6 for editing pictures and manipulations.</p></li>
+					<li class="lim-ts lim-animate lim-bounceright"><h2>Illustrator</h2><p>I design vector arts and logo design in illustrator.</p></li>
+					<li class="lim-ts lim-animate lim-bouncein"><h2>Languages</h2><p>I can speak English, Nepali,Korean ,Malayu and Limbu(Regional Lang).</p></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--contant-->
 <div class="contact" id="contact">
-     <div class='svg-top'>
-                <svg viewBox='0 186.5 1920 113.5' x='0px' y='0px'>
-                    <polygon points='-30,300 355.167,210.5 1432.5,290 1920,198.5 1920,300'/>
+    <!--  <div class="svg-top">
+                <svg viewBox="0 186.5 1920 113.5" x="0px" y="0px">
+                    <polygon points="-30,300 355.167,210.5 1432.5,290 1920,198.5 1920,300"></polygon>
                 </svg>
-            </div>
-  <div class="container">
-    <div class="contact-wrapper">
-      <div class="contact-info">
+            </div> -->
+  <div class="lim-width">
+    <div class="contact-wrapper box-shadow">
+      <div class="contact-info lim-ts lim-animate lim-bounceleft">
         <h3>Contact More</h3>
         <p>You can use the following way to contact me too.</p>
-        <div class="contact-link a-link">
+        <div class="contact-link a-link hov-bg">
           <a href=""><span class="fab fa-whatsapp"></span> +9779863714184</a>
           <a href=""><span class="fab fa-facebook"></span> /lonelylimbu</a>
           <a href=""><span class="fab fa-twitter"></span> /lonely_limbu</a>
         </div>
       </div>
-      <div class="contact-form form">
+      <div class="contact-form form lim-ts lim-animate lim-bounceright">
         <div class="input-group">
-        <input type="text" id="name" name="name" placeholder="Your Name.." />
-        <input type="text" name="subject" id="subject" placeholder="Subject.." />
+        <input type="text" id="name" name="name" placeholder="Your Name..">
+        <input type="text" name="subject" id="subject" placeholder="Subject..">
       </div>
         <textarea id="textarea" placeholder="Your Message.."></textarea>
         <a class="send">Send</a>
@@ -450,21 +456,23 @@
 
 </div>
 </div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="clear"/>
 <footer>
-  <div class="credit">
-    <span class="logo-footer"><img src="image/panta.png"/></span>
-    <p>
-    Made with <i class="fa fa-heart" style="color: tomato"></i> & HTML, CSS, and JQUERY 2019 - <script type="text/javascript">document.write(new Date().getFullYear())</script>.</p>
-  </div>
+	<div class="lim-width">
+		<div class="footer-item">
+			<div class="footer-left">
+				<h1 class="lim-ts lim-animate lim-bouncein ftlogo">BUDDHA</h1>
+			</div>
+			<div class="footer-right">
+				<p class="lim-ts lim-animate lim-bouncein">
+					made with <span class="fas fa-heart blue-heart"></span> HTML,CSS & JQUERY. <i class="fas fa-copyright"></i>
+						<span class="title-name">buddha</span> - <span class="year"><script type="text/javascript">//<![CDATA[
+						var date = new Date(); var year = date.getFullYear();document.write(year);//]]></script>
+				</span>
+				</p>
+			</div>
+		</div>
+	</div>
 </footer>
-<div class="gototop">
-<button onclick='$("html, body").animate({scrollTop: 0}, 1066);'><i aria-hidden='true' class='fa fa-chevron-up'></i></button>
-</div>
+<button class='moveup' onclick='$("html, body").animate({scrollTop: 0}, 1066);'><i aria-hidden='true' class='fa fa-chevron-up'></i></button>
 </body>
 </html>
