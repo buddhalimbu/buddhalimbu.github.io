@@ -1,0 +1,214 @@
+.lim-ts{transition:0.6s ease;-webkit-transition:0.6s ease;-o-transition:0.6s ease;-ms-transition:0.6s ease;-moz-transition:0.6s ease}
+.lim-animate{visibility:visible;animation-play-state:paused;-webkit-animation-play-state:paused;-moz-animation-play-state:paused;-ms-animation-play-state:paused;-o-animation-play-state:paused}
+.lim-afteranimate{visibility:visible;animation-fill-mode:both;-webkit-animation-fill-mode:both;-ms-animation-fill-mode:both;-moz-animation-fill-mode:both;-o-animation-fill-mode:both;animation-duration:1s;-ms-animation-duration:1s;-moz-animation-duration:1s;-webkit-animation-duration:1s;-o-animation-duration:1s;animation-play-state:running;-webkit-animation-play-state:running;-ms-animation-play-state:running;-moz-animation-play-state:running;-o-animation-play-state:running}
+@keyframes lim-fadeindown{
+  0%{transform:translateY(-20px);opacity:0}
+  100%{transform:translateY(0px);opacity:1}
+}
+@-webkit-keyframes lim-fadeindown{
+  0%{transform:translateY(-20px);opacity:0}
+  100%{transform:translateY(0px);opacity:1}
+}
+@-ms-keyframes lim-fadeindown{
+  0%{transform:translateY(-20px);opacity:0}
+  100%{transform:translateY(0px);opacity:1}
+}
+@-moz-keyframes lim-fadeindown{
+  0%{transform:translateY(-20px);opacity:0}
+  100%{transform:translateY(0px);opacity:1}
+}
+@-o-keyframes lim-fadeindown{
+  0%{transform:translateY(-20px);opacity:0}
+  100%{transform:translateY(0px);opacity:1}
+}
+@keyframes lim-fadein{
+  0%{opacity:0}
+  60%{opacity:1}
+  20%{opacity:0}
+  100%{opacity:1}
+}
+@-moz-keyframes lim-fadein{
+  0%{opacity:0}
+  20%{opacity:0}
+  100%{opacity:1}
+}
+@-ms-keyframes lim-fadein{
+  0%{opacity:0}
+  20%{opacity:0}
+  100%{opacity:1}
+}
+@-o-keyframes lim-fadein{
+  0%{opacity:0}
+  20%{opacity:0}
+  100%{opacity:1}
+}
+@-webkit-keyframes lim-fadein{
+  0%{opacity:0}
+  20%{opacity:0}
+  100%{opacity:1}
+}
+@keyframes lim-bounceleft{
+  0%{opacity:0;transform:translateX(-2000px)}
+  60%{transform:translateX(20px)}
+  80%{transform:translateX(-5px)}
+  100%{opacity:1;transform:translateX(0)}
+}
+@-webkit-keyframes lim-bounceleft{
+  0%{opacity:0;-webkit-transform:translateX(-2000px)}
+  60%{-webkit-transform:translateX(20px)}
+  80%{-webkit-transform:translateX(-5px)}
+  100%{opacity:1;-webkit-transform:translateX(0)}
+}
+@-moz-keyframes lim-bounceleft{
+  0%{opacity:0;-moz-transform:translateX(-2000px)}
+  60%{-moz-transform:translateX(20px)}
+  80%{-moz-transform:translateX(-5px)}
+  100%{opacity:1;-moz-transform:translateX(0)}
+}
+@-o-keyframes lim-bounceleft{
+  0%{opacity:0;-o-transform:translateX(-2000px)}
+  60%{-o-transform:translateX(20px)}
+  80%{-o-transform:translateX(-5px)}
+  100%{opacity:1;-o-transform:translateX(0)}
+}
+@-ms-keyframes lim-bounceleft{
+  0%{opacity:0;-ms-transform:translateX(-2000px)}
+  60%{-ms-transform:translateX(20px)}
+  80%{-ms-transform:translateX(-5px)}
+  100%{opacity:1;-ms-transform:translateX(0)}
+}
+@keyframes lim-bounceright{
+  0%{opacity:0;transform:translateX(2000px)}
+  60%{transform:translateX(-20px)}
+  80%{transform:translateX(5px)}
+  100%{opacity:1;transform:translateX(0)}
+}
+@-webkit-keyframes lim-bounceright{
+  0%{opacity:0;-webkit-transform:translateX(2000px)}
+  60%{-webkit-transform:translateX(-20px)}
+  80%{-webkit-transform:translateX(5px)}
+  100%{opacity:1;-webkit-transform:translateX(0)}
+}
+@-moz-keyframes lim-bounceright{
+  0%{opacity:0;-moz-transform:translateX(2000px)}
+  60%{-moz-transform:translateX(-20px)}
+  80%{-moz-transform:translateX(5px)}
+  100%{opacity:1;-moz-transform:translateX(0)}
+}
+@-o-keyframes lim-bounceright{
+  0%{opacity:0;-o-transform:translateX(2000px)}
+  60%{-o-transform:translateX(-20px)}
+  80%{-o-transform:translateX(5px)}
+  100%{opacity:1;-o-transform:translateX(0)}
+}
+@-ms-keyframes lim-bounceright{
+  0%{opacity:0;-ms-transform:translateX(2000px)}
+  60%{-ms-transform:translateX(-20px)}
+  80%{-ms-transform:translateX(5px)}
+  100%{opacity:1;-ms-transform:translateX(0)}
+}
+@keyframes lim-fadeinup{
+  0%{opacity:0;transform:translateX(20px)}
+  100%{opacity:1;transform:translateX(0)}
+}
+@-webkit-keyframes lim-fadeinup{
+  0%{opacity:0;-webkit-transform:translateX(20px)}
+  100%{opacity:1;-webkit-transform:translateX(0)}
+}
+@-ms-keyframes lim-fadeinup{
+  0%{opacity:0;-ms-transform:translateX(20px)}
+  100%{opacity:1;-ms-transform:translateX(0)}
+}
+@-o-keyframes lim-fadeinup{
+  0%{opacity:0;-o-transform:translateX(20px)}
+  100%{opacity:1;-o-transform:translateX(0)}
+}
+@-moz-keyframes lim-fadeinup{
+  0%{opacity:0;-moz-transform:translateX(20px)}
+  100%{opacity:1;-moz-transform:translateX(0)}
+}
+@keyframes lim-bouncein{
+  0%{opacity:0;transform:scale(0.3)}
+  50%{transform:scale(1.05)}
+  70%{transform:scale(0.7)}
+  100%{transform:scale(1);opacity:1}
+}
+@-webkit-keyframes lim-bouncein{
+  0%{opacity:0;-webkit-transform:scale(0.3)}
+  50%{-webkit-transform:scale(1.05)}
+  70%{-webkit-transform:scale(0.7)}
+  100%{-webkit-transform:scale(1);opacity:1}
+}
+@-moz-keyframes lim-bouncein{
+  0%{opacity:0;-moz-transform:scale(0.3)}
+  50%{-moz-transform:scale(1.05)}
+  70%{-moz-transform:scale(0.7)}
+  100%{-moz-transform:scale(1);opacity:1}
+}
+@-o-keyframes lim-bouncein{
+  0%{opacity:0;-o-transform:scale(0.3)}
+  50%{-o-transform:scale(1.05)}
+  70%{-o-transform:scale(0.7)}
+  100%{-o-transform:scale(1);opacity:1}
+}
+@-ms-keyframes lim-bouncein{
+  0%{opacity:0;-ms-transform:scale(0.3)}
+  50%{-ms-transform:scale(1.05)}
+  70%{-ms-transform:scale(0.7)}
+  100%{-ms-transform:scale(1);opacity:1}
+}
+@keyframes lim-moveup{
+  0%{opacity:1;transform:translateY(40px)}
+  100%{opacity:1;transform:translateY(0)}
+}
+@-webkit-keyframes lim-moveup{
+  0%{opacity:1;-webkit-transform:translateY(40px)}
+  100%{opacity:1;-webkit-transform:translateY(0)}
+}
+@-moz-keyframes lim-moveup{
+  0%{opacity:1;-moz-transform:translateY(40px)}
+  100%{opacity:1;-moz-transform:translateY(0)}
+}
+@-o-keyframes lim-moveup{
+  0%{opacity:1;-o-transform:translateY(40px)}
+  100%{opacity:1;-o-transform:translateY(0)}
+}
+@-ms-keyframes lim-moveup{
+  0%{opacity:1;-ms-transform:translateY(40px)}
+  100%{opacity:1;-ms-transform:translateY(0)}
+}
+@keyframes lim-fadebgcolor{
+  0%{background:none}
+  70%{background:none}
+  100%{background#1d90ea}
+}
+@-webkit-keyframes lim-fadebgcolor{
+  0%{background:none}
+  70%{background:none}
+  100%{background#1d90ea}
+}
+@-o-keyframes lim-fadebgcolor{
+  0%{background:none}
+  70%{background:none}
+  100%{background#1d90ea}
+}
+@-moz-keyframes lim-fadebgcolor{
+  0%{background:none}
+  70%{background:none}
+  100%{background#1d90ea}
+}
+@-ms-keyframes lim-fadebgcolor{
+  0%{background:none}
+  70%{background:none}
+  100%{background#1d90ea}
+}
+.lim-afteranimate.animationDelay{animation-delay:.4s;-wekit-animation-delay:.4s}
+.lim-afteranimate.animationDelayMed{animation-delay:1.2s;-webkit-animation-delay:1.2s}
+.lim-afteraminate.animationDelayLong{animation-delay:1.6s;-webkit-animation-delay:1.6s}
+.lim-afteraminate.lim-fadebgcolor{animation-name:lim-fadebgcolor;-webkit-animation-name:lim-fadebgcolor;-moz-animation-name:lim-fadebgcolor;-o-animation-name:lim-fadebgcolor;-ms-animation-name:lim-fadebgcolor}
+.lim-afteranimate.lim-bouncein{animation-name:lim-bouncein;-webkit-animation-name:lim-bouncein;-moz-animation-name:lim-bouncein;-ms-animation-name:lim-bouncein;-o-animation-name:lim-bouncein}
+.lim-afteranimate.lim-bounceright{animation-name:lim-bounceright;-webkit-animation-name:lim-bounceright;-ms-animation-name:lim-bounceright;-moz-animation-name:lim-bounceright;-o-animation-name:lim-bounceright}
+.lim-afteranimate.lim-bounceleft{animation-name:lim-bounceleft;-webkit-animation-name:lim-bounceleft;-ms-animation-name:lim-bounceleft;-moz-animation-name:lim-bounceleft;-o-animation-name:lim-bounceleft}
+.lim-afteranimate.lim-fadein{animation-name:lim-fadein;-webkit-animation-name:lim-fadein;-ms-animation-name:lim-fadein;-moz-animation-name:lim-fadein;-o-animation-name:lim-fadein}
+.lim-afteranimate.lim-fadeindown{animation-name:lim-fadeindown;-webkit-animation-name:lim-fadeindown;-ms-animation-name:lim-fadeindown;-moz-animation-name:lim-fadeindown;-o-animation-name:lim-fadeindown}
+.lim-afteranimate.lim-moveup{animation-name:lim-moveup;-webkit-animation-name:lim-moveup;-ms-animation-name:lim-moveup;-moz-animation-name:lim-moveup;-o-animation-name:lim-moveup}
