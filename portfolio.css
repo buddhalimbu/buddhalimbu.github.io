@@ -241,7 +241,8 @@ body ul,body ol{list-style:none}
 .lim-header{background:#fff;color:#000;position:relative;z-index:100;display:block
 	position:relative;width:100%;padding:0;box-shadow:0 6px 18px 7px rgba(0,0,0,0.05);height:100%;position:sticky;top:0;z-index:88888}
 .lim-logo{width:auto;white-space:wrap;display:inline-block;position:relative;text-align:center;display:flex;display:-webkit-flex;display:-ms-flex;display:-o-flex;display:-moz-flex;justify-content:center;-webkit-justify-content:center;-ms-justify-content:center;-moz-justify-content:center;-o-justify-content:center;align-items:center}
-.lim-logo img{width:40px;height:auto}
+.lim-logo img {width: 120px;height: 46px;}
+.ft-logo {width: 200px;height: auto;}
 .lim-logo h1{text-decoration:uppercase;font-size:30px;color:#1d90ea;text-decoration:none;position:relative;font-weight:300;z-index:10;padding:6px 10px;letter-spacing:inherit}
 .lim-width{width:100%;max-width:1100px;margin:0 auto;position:relative;padding:0 12px}
 .lim-topnav,.lim-navigation{display:flex;display:-webkit-flex;display:-moz-flex;display:-ms-flex;justify-content:space-between;-webkit-justify-content:space-between;-ms-justify-content:space-between;-moz-justify-content:space-between;align-items:center}
