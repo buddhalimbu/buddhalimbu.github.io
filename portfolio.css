@@ -317,7 +317,7 @@ body ul,body ol{list-style:none}
 .author-content h2{font-size:22px;padding:12px;text-transform:capitalize;letter-spacing:0.3em;background-color:#1d90ea;margin-bottom:20px;color:#fff;position:relative;display:inline-block}
 .author-content h2:after{position:absolute;right:-10px;background:#1d90ea;width:20px;height:100%;content:"";bottom:0;transform:skewX(15deg);-webkit-transform:skewX(15deg);-ms-transform:skewX(15deg);-moz-transform:skewX(15deg);-o-transform:skewX(15deg)}
 .author-content h2:before{position:absolute;right:-50px;background:#21669c;width:50px;height:120%;content:"";bottom:0;transform:skewX(15deg);-webkit-transform:skewX(15deg);-ms-transform:skewX(15deg);-moz-transform:skewX(15deg);-o-transform:skewX(15deg);border-right:10px solid #222}
-.author-content p{line-height:1.4em;font-size:18px;letter-spacing:0.12em;font-weight:300}
+.author-content p{line-height:1.4em;font-size:16px;letter-spacing:0.12em;font-weight:300}
 .author-social{margin-top:40px}
 .author-social a{width:40px;height:40px;line-height:40px;text-align:center;text-decoration:none;color:#fff;background:#1d90ea;border-radius:3px;margin:0 6px 0 0;display:inline-block}
 @media screen and (max-width:888px){
