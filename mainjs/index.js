@@ -63,5 +63,8 @@ $('.pin').click(function(){
 	var link = "https://www.pinterest.com/pin/create/button/?description=" + msg + " - " + title;
 	window.open(link,"_blank");
 });
-
+//gotohomepage
+			$('.lim-logo img').click(function(){
+				location.reload();
+			});
 });
