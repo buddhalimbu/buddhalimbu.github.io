@@ -92,7 +92,7 @@ $(function () {
         var relType = $(this).find("span").attr("data-type");
         if (relType != undefined && relType.match("featured")) {
             $.ajax({
-                url: "http://buddhalimbu.com.np/feeds/posts/default?orderby=published&alt=json-in-script&max-results=10",
+                url: "https://buddhalimbu.com.np/feeds/posts/default?orderby=published&alt=json-in-script&max-results=10",
                 type: "get",
                 dataType: "jsonp",
                 beforeSend: function () {
