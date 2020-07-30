@@ -1,6 +1,14 @@
-//scripts
+//
+//============================================
+//Jquery Scripts
+//https://buddhalimbu.com.np
+//https://buddhalimbu.github.io
+//============================================
+
+//Star the function
 
 $(function () {
+	//setting up variables;
     var body = $("body");
     var header = $(".header");
     var closeButton = ($(".closebtn"), $(".closebtn"));
@@ -8,24 +16,33 @@ $(function () {
     var year = new Date().getFullYear();
     var togButton = $(".togmenus");
     var gototop = $(".gototop");
+    var sharemenu = $('.widget-share-menu');
 
+    //header and menu toggle for mobile devices or small screens
     header.each(function () {
         header.find(".topnav").append(closediv);
         header.find(".togmenus").click(function () {
             body.toggleClass("togMenu");
+            body.toggleClass("togsharemenu");
         });
     });
 
-    $(window).scroll(function () {
-        if ($(this).scrollTop() >= 40) {
+    //window scroll function to show and fix header 
+    $(window).on('scroll',function () {
+    	var minheight = 40;
+    	var maxheight = $('.contact').height();
+        if ($(this).scrollTop() > minheight ) {
             header.addClass("fix");
             gototop.addClass("show");
-        } else {
+        } 
+        else {
             header.removeClass("fix");
             gototop.removeClass("show");
         }
     });
 
+
+    //Open modal clicking in the img 
     $(".port-box").click(function () {
         var modal = $("#imgmodal"),
             img = $("#imgformodal"),
@@ -46,6 +63,10 @@ $(function () {
     $(".modal-close").click(function () {
         "#imgmodal".slideToggle(100);
     });
+
+    //lazyload script for images to automatically create the image source when the page load , scroll or resize
+    //Only works the scrip to lazify the images uploaded on the blogger.com website.
+    //Other platform images will get the it original height and width
     !(function (lazyload) {
         lazyload.fn.JqueryLazyImg = function () {
             return this.each(function () {
@@ -80,99 +101,18 @@ $(function () {
         };
     })(jQuery);
 
+    //lazyloading images
     $(".img-thumb").JqueryLazyImg();
 
-  
-    $(".blog-feat").each(function () {
-         var monthFormat = ["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sep", "Oct", "Nov", "Dec"],
-        postPerPage = 8;
-        var nth = "https://1.bp.blogspot.com/-Al8VTaXtQBM/Xutv9A0CH-I/AAAAAAAADFo/VWJUtJc09pMsufQwwiXPpQTQ2BvamSaEwCLcBGAsYHQ/s320/no-img.png";
-        var relPost = $(this);
-        var relLabel = $(this).find("span").attr("data-label");
-        var relType = $(this).find("span").attr("data-type");
-        if (relType != undefined && relType.match("featured")) {
-            $.ajax({
-                url: "https://buddhalimbu.com.np/feeds/posts/default?orderby=published&alt=json-in-script&max-results=10",
-                type: "get",
-                dataType: "jsonp",
-                beforeSend: function () {
-                    relPost.append('<div class="wait"><div class="loading-icon"></div></div>');
-                },
-                success: function (a) {
-                    relPost.find(".wait").remove();
-                    relPost.append('<div class="featured-post-wrapper"></div>');
-                    if (a.feed.entry) {
-                        for (var t = 0; t < a.feed.entry.length; t++) {
-                            for (var s = a.feed.entry[t], l = 0; l < a.feed.entry[t].link.length; l++)
-                                if ("alternate" == a.feed.entry[t].link[l].rel) {
-                                    var relHref = a.feed.entry[t].link[l].href;
-                                    break;
-                                }
-                            if ("content" in s) var relSum = s.content.$t;
-                            else relSum = "summary" in b_rc ? s.summary.$t : "";
-                            170 < (relSum = relSum.replace(/<\S[^>]*>/g, "")).length && (relSum = relSum.substring(0, 100) + "...");
-                            var postContent = s.content.$t;
-                            if (postContent.indexOf("<img") > -1) {
-                                var relThumb = s.media$thumbnail.url;
-                            } else if (postContent.match(/youtube\.com.*(\?v=|\/embed\/)(.{11})/) != null) {
-                                var ytthumb = postContent.match(/youtube\.com.*(\?v=|\/embed\/)(.{11})/).pop();
-                                if (ytthumb.length == 11) {
-                                    var relThumb = "'//img.youtube.com/vi/" + ytthumb + "/0.jpg'";
-                                }
-                            } else if (postContent.match(/src=(.+?[\.jpg|\.gif|\.png]")/) != null) {
-                                relThumb = postContent.match(/src=(.+?[\.jpg|\.gif|\.png]")/)[1];
-                            } else {
-                                relThumb = nth;
-                            }
-                            if (s.category != null) {
-                                for (cat = 0; cat < s.category.length; cat++) var relCat = s.category[cat].term;
-                            } else {
-                                relCat = "uncategorized";
-                            }
-                            var relTitle = s.title.$t,
-                                relAuthor = s.author[0].name.$t,
-                                p = s.published.$t,
-                                c = p.substring(0, 4),
-                                f = p.substring(5, 7),
-                                relTime = p.substring(8, 10),
-                                postTime = monthFormat[parseInt(f, 9)] + " " + relTime + ", " + c,
-                                text = "view all",
-                                bb = '<a class="simple-viewmore" href="/search/label/' + relTitle + '?&max-result=8">' + text + "</a>",
-                                relBlock =
-                                    '<div class="f-post"><div class="f-img"><a class="f-href" href="' +
-                                    relHref +
-                                    '"><img class="f-thumb" data-src="' +
-                                    relThumb +
-                                    '"/></a></div><div class="f-meta"><div class="f-label"><a href="/search/label/' +
-                                    relCat +
-                                    '?&max-result=10">' +
-                                    relCat +
-                                    '</a></div><div class="f-title"><h2><a href="' +
-                                    relHref +
-                                    '">' +
-                                    relTitle +
-                                    '</a></h2></div><div class="f-footer"><span class="f-author meta-author">' +
-                                    relAuthor +
-                                    '</span><span class="f-time meta-time">' +
-                                    postTime +
-                                    "</span></div></div></div>";
-                            relPost.find(".featured-post-wrapper").append(relBlock), $(".f-thumb").JqueryLazyImg();
-                        }
-                    } else {
-                        relPost.append('<div class="noposts"><span class="fas fa-burn"/> <span>no posts check your label once in widget</span></div>');
-                    }
-                },
-            });
-        }
-    });
-
+    //Printing curent year
     $(".year").html(year);
 
+    //Hide loader on after page full load or windo loads up
     $(window).on("load", function () {
         $(".fix-loader").fadeOut("slow");
     });
 });
-
+//Goto hash href clicking on anchor tags
 $(function () {
     $("a[href*=\\#]:not([href=\\#])").on("click", function () {
         var target = $(this.hash);
@@ -199,6 +139,7 @@ $(function () {
     });
 });
 
+//Working share menu click on the icons
 $(document).ready(function () {
     var link = $(location).attr("href");
     $(".widget-share-menu")
@@ -232,3 +173,7 @@ $(document).ready(function () {
             window.open(url, "_blank");
         });
 });
+
+//===========================
+/*Ended the script*/
+//===========================
