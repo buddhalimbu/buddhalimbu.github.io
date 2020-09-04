@@ -159,7 +159,7 @@ function ShareLinks(){
     var fb = $('.share .fb');
     var tw = $('.share .tw');
     var ln = $('.share .ln');
-    var pn = $('share .pn');
+    var pn = $('.share .pn');
     var wa = $('.share .wa');
     fb.onclick = () => {
         var url ="https://facebook.com/sharer.php?u=" + titleLink;
