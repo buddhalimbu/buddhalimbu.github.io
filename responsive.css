@@ -89,7 +89,7 @@
 		font-size: 30px
 	}
 	.main .section #item {
-		font-synthesis: 24px
+		font-size: 24px
 	}
 	.blog .blog-wrapper {
 		grid-template-columns: 1fr 1fr
