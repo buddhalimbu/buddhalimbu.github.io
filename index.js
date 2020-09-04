@@ -186,6 +186,7 @@ ShareLinks();
 
 
 // Type writter plugins
+writter = () => {
 const words = ["Buddha.","Graphics Designer.","Programmer.","Blogger."];
 let i=0;
 let timer;
@@ -232,7 +233,8 @@ let timer;
 };
 
 typingEffect();
-
+}
+writter();
 
 // Syntax highlighter by w3schools.com
 // This is Syntax hightlighter by https://www.w3schools.com
