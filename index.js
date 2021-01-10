@@ -16,6 +16,11 @@ var year = $('#year');
 var date = new Date().getFullYear();
 var sendMail = $('.sendmail');
 var logo = $$('.siteload');
+var a = $('.ms-wrap');
+var b = $('.m-button');
+b.onclick = () => {
+    body.classList.toggle('toggle-ms')
+}
 
 //reload onclick logo
 logo.forEach((x) => {
