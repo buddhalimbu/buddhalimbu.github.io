@@ -1869,15 +1869,15 @@ footer .footer-logo h1 {
         border-radius: 10px;
         background: #fff;
         overflow: hidden;
-        opacity: 0;
-        visibility: hidden;
+        opacity: 1;
+        visibility: visible;
         transition: 0.7s ease-in-out;
         box-shadow: 0px 10px 20px 10px rgba(0,0,0,0.5)
 
     }
     .toggle-ms .ms-wrap {
-        opacity: 1;
-        visibility: visible;
+        opacity: 0;
+        visibility: hidden;
     }
     .ms-head {
         position: relative;
@@ -1911,7 +1911,19 @@ footer .footer-logo h1 {
         border-radius: 50%;
         line-height: 26px;
         text-align: center;
+	position:relative
     }
+.ms-chat span.ms-user:after {
+    content: "";
+    width: 12px;
+    height: 12px;
+    background: #24c324;
+    display: block;
+    position: absolute;
+    top: -3px;
+    right: -3px;
+    border-radius: 50%;
+}
     .chat-with-me {
         display: block;
         margin: 0 0 20px;
