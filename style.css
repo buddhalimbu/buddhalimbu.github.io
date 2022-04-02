@@ -1869,13 +1869,13 @@ footer .footer-logo h1 {
         border-radius: 10px;
         background: #fff;
         overflow: hidden;
-        display: block;
+        display: none;
         transition: 0.7s ease-in-out;
         box-shadow: 0px 10px 20px 10px rgba(0,0,0,0.5)
 
     }
     .toggle-ms .ms-wrap {
-        display:none;
+        display:block;
     }
     .ms-head {
         position: relative;
