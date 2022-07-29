@@ -27,11 +27,21 @@ function CreateFontAwesome() {
 
 //Create Div
 
-function createDiv() {
-    const div = '<div class="share "><div class="shareWrap"><span class="fa fa-share share-icon"></span></div><div class="iconWrap"><span class="fa fa-facebook fb"></span><span class="fa fa-twitter tw"></span><span class="fa fa-pinterest pn"></span><span class="fa fa-linkedin ln"></span><span class="fa fa-whatsapp wa"></span><span class="fa fa-times closeShare"></span></div></div>';
+const div = `
+   <div class="share">
+    <div class="shareWrap">
+        <span class="fa fa-share share-icon"></span>
+    </div>
+    <div class="iconWrap">
+        <span class="fa fa-facebook fb"></span><span class="fa fa-twitter tw"></span><span class="fa fa-pinterest pn"></span><span class="fa fa-linkedin ln"></span><span class="fa fa-whatsapp wa"></span>
+        <span class="fa fa-times closeShare"></span>
+    </div>
+</div>
+   
+`;
 
-    body.innerHTML += div;
-}
+    
+
 
 //Create CSS
 
@@ -146,7 +156,7 @@ function ShowHideIcon(){
     
 }
 
-// Now clearting Click Function();
+// Now adding Click Function();
 
 function makeLinkButton() {
     var fbLink = $(".share .fb");
@@ -190,13 +200,23 @@ function makeLinkButton() {
     };
 }
 
-CreateFontAwesome()
-
-createDiv();;
-
+//Call function 
+CreateFontAwesome();
 createStyle();
 
-ShowHideIcon();
 
-makeLinkButton();
+function LoadFunctionAfterPageLoad(){
+     // Calling function after page load because this won't work on head without calling()
+    
+     // Create Function 
+     function flashDiv(){
+     document.body.innerHTML += div;
+     }
+     // Call it Now
+    flashDiv();
+    ShowHideIcon();
+    makeLinkButton();
+}
 
+// Window onload function ()
+window.onload = LoadFunctionAfterPageLoad;
