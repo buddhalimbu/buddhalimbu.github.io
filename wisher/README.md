@@ -1,6 +1,6 @@
 # JavaScript wisher template with functional features .
 
-**DEMO** : [Demo here](https://buddhalimbu.github.io/wisher/index.html/)
+**DEMO** : [Demo here](https://buddhalimbu.github.io/wisher/index.html)
 
 **What i usd**
 - Html
