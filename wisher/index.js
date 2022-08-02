@@ -45,6 +45,8 @@ x.onclick = () => {
 
     if (fname === "" || xname === "") {
         alert.classList.add("show");
+$('.msg').innerHTML = " Sorry , You did not enter the name in the textbox.";
+        
 
         loader.classList.add("active");
 
@@ -53,7 +55,20 @@ x.onclick = () => {
         setTimeout(function () {
             loader.classList.remove("active");
         }, 3000);
-    } else {
+    } 
+else if(!isNaN(fname) || !isNaN(xname)){
+   alert.classList.add("show");
+   $('.msg').innerHTML = " Sorry , You can not enter number in the textbox.";
+        loader.classList.add("active");
+
+        overlay.classList.add("active");
+
+        setTimeout(function () {
+            loader.classList.remove("active");
+        }, 3000);
+  }
+
+else {
         $(".list-name").innerHTML = xname;
 
         $(".sname").innerHTML = fname;
