@@ -13,9 +13,13 @@
 body {
     scroll-beahaviour:smooth;
     font-family:'Noto Sans',sans-serif;font-size:16px;line-height:1.4em;overflow-x:hidden;
-    padding:0; background:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.8)),url('https://images.pexels.com/photos/243989/pexels-photo-243989.jpeg'); 
+    padding:0;  background:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.8)),url('https://images.pexels.com/photos/243989/pexels-photo-243989.jpeg'); 
 background-size:cover;
-background-repeat:no-repeat;
+background-repeat:no-repeat; 
+}
+
+.rd {
+    display:none
 }
 
 .myloader,.overlay{
@@ -28,12 +32,13 @@ background-repeat:no-repeat;
     width:100%;
     height:100%;
     z-index:77;
-    display:grid;
+    display:none;
     place-items:center;
     min-height:100vh;
     visibility:hidden;
     opacity:0;
     transition:0.4s eass;
+    padding:20px;
 }
 .myloader {
     z-index:100
@@ -49,7 +54,8 @@ background-repeat:no-repeat;
 
 .myloader.active,.overlay.active {
     visibility:visible;
-    opacity:1
+    opacity:1;
+    display:grid
 }
 
 @keyframes round {
@@ -64,7 +70,7 @@ background-repeat:no-repeat;
     border:none;
     display:none;
     position: relative ;
-    z-index:1
+    z-index:12;
 }
 .wrapper.active {
     display:block
@@ -75,9 +81,8 @@ position:fixed;
 font-family:'Nunito',sans-serif;
 display:grid;
 place-items:center;
-min-height:100vh;
-background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.8)),url('https://images.pexels.com/photos/2079169/pexels-photo-2079169.jpeg'); 
-background-size:cover;
+min-height:100vh; background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.8)),url('https://images.pexels.com/photos/2079169/pexels-photo-2079169.jpeg'); 
+background-size:cover; 
 top:0;
 left:0;
 bottom:0;
@@ -85,12 +90,14 @@ right:0;
 width:100%;
 height:100%;
 opacity:1;
-visibility: visible 
+visibility: visible ;
+z-index:11; 
 }
 
 .wish.hide {
     visibility:hidden;
-    opacity:0
+    opacity:0;
+    
 }
 .wisher h1{
     font-size:20px;
@@ -127,10 +134,10 @@ visibility: visible
     margin: 0 auto;
     border:none;
     padding:8px;
-    font-family:'Berkshire',cursive;
+    font-family:'Nunito', sans-serif;    
     letter-spacing:1px;
     border:none;
-    border-bottom:0.5px dashed rgba(255,255,255,.4)
+    border-bottom:0.5px dashed rgba(255,255,255,.4);
     
 }
 .wisher ::placeholder {
@@ -177,15 +184,16 @@ visibility: visible
     border:none;
     padding:10px 8px;
     border-bottom: 1px dashed rgba(255,255,255,0.3);
+    font-family:'Nunito', sans-serif;  
     
     
 }
 
-.wbox ::placeholder {
+.wish ::placeholder {
     color:rgba(255,255,255,0.64);
     letter-spacing:1px;
-    font-size:14px;
-    font-family:'Berkshire',cursive
+    font-size:9px;
+    font-family:'Nunito', sans-serif 
 }
 
 .yname {
@@ -238,6 +246,8 @@ visibility: visible
     border-radius:100px;
     box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
     font-size:14px;
+    position:relative;
+    z-index:66
     
 }
 
@@ -285,7 +295,8 @@ visibility: visible
     position: absolute;
     bottom:-20px;
     right:-20px;
-    height:130px; width;auto
+    height:130px; 
+    width:auto
 }
 
 .item {
@@ -346,36 +357,42 @@ color:#fff
 }
 
 .info {
-    background:#ed6b5b;color:#fff!
-    font-size:12px;padding:3px 12px;
-    border-radius:4px;
-    position: absolute;
-    top:7px;
-    right:0;
-    transition:0.4s ease;
-    z-index:22;
-    visibility:hidden;
-    opacity:0
+    
 }
 
 .info p {
     color:#fff;
     font-size:8px;
-    z-index;
+    z-index:1;
     transition:0.4s ease;
 }
 
 .info.active {
-    right: 10px;
-    visibility: visible;
-    opacity:1
+    top: 7px!important;
+    visibility: visible!important;
+    opacity:1!important
 }
+
+.design {
+    position:fixed;
+    bottom:13px;
+    left:13px;
+    color:#ffbfff;
+    text-transform:uppercase;
+    font-size:10px;
+    z-index:999
+}
+.design a {
+    text-decoration:none;
+    color:#ed6b5b
+}
+
 
 @media screen and (max-width:678px){
     .mycard {
-        width:350px;
-        border-left-width:40px;
-        height:auto;
+        width:350px!important;
+        border-left-width:40px!important;
+        height:auto!important;
     }
     .dear {
         font-size:23px
