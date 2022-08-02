@@ -2,7 +2,7 @@
 
 **DEMO** : [Demo here](https://buddhalimbu.github.io/wisher/infex.html/)
 
-** What i usd**
+**What i usd**
 - Html
 - Css
 - javascript
