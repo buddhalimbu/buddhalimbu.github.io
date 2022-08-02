@@ -1,4 +1,4 @@
-# Simple-dev-portfolio-template
-Simple developer portfolio template with CSS.
+# JavaScript wisher template with functional features .
 
-**DEMO** : [Demo here](https://buddhalimbu.github.io/simple-dev-portfolio-template/)
+**DEMO** : [Demo here](https://buddhalimbu.github.io/wisher/infec html/)
+
