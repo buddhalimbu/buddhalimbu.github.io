@@ -2,7 +2,7 @@
 
 **DEMO** : [Demo here](https://buddhalimbu.github.io/wisher/index.html)
 
-**What i usd**
+**What i use*
 - Html
 - Css
 - javascript
