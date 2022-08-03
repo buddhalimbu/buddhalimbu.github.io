@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <meta name="veiwport" content="width=device-width,initial-scale=1.0"/>
+    <title>JavaScript to-do List</title>
+    
+    <link rel="stylesheet" href="todo.css"/>
+  
+</head>
+<body>
+    
+    <div class="box">
+        <h2>Simple to-do List JavaScript</h2><br/>
+        <div class="item-top">
+            <textarea class="text" placeholder="Write something...."></textarea>
+            <div class="btns">
+                <input type="button" value="Submit" onclick="addNotes();"/>
+            <input type="button" value="Clear" class="clear" onclick="Clear();"/>
+            </div>
+        </div>
+    
+   <ul class="ul">
+       <span class="alert"></span>
+       <li> JavaScript is powerful.</li>
+       <li>I like coding </li>
+       <li>Personal website.</li>
+       <li>Click me to remove.</li>
+   </ul>
+    </div>
+ <script src="todo.js"></script>
+</body>                            
+</html>
