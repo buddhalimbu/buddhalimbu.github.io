@@ -1,10 +1,22 @@
-//create functions
+//create
 
 const alert = document.querySelector(".alert"); // glob variable
 
+const clearAll = document.querySelector(".clear");
+
+const addItems = document.querySelector("#addItems");
+
+const ul = document.querySelector(".ul");
+
+const text = document.querySelector(".text");
+
+const search = document.querySelector(".searchMe");
+
 const sucessColor = "#006666";
 
-const errorColor = "#ff9900";
+const errorColor = "#151235";
+
+const defaultColor = "#000";
 
 var li = document.querySelectorAll(".ul li");
 
@@ -13,14 +25,18 @@ var i;
 for (i = 0; i < li.length; i++) {
     const list = li[i];
 
+    //create icon trash fontawesome;
+
     const span = document.createElement("span");
 
-    span.className = "delete";
+    span.className = "fa fa-trash-alt delete";
 
-    span.appendChild(document.createTextNode("\u00D7"));
+    //create delete button icon
 
     list.appendChild(span);
 }
+
+//romove note clicking on trash icon
 
 var remove = document.getElementsByClassName("delete");
 
@@ -38,7 +54,11 @@ for (i = 0; i < remove.length; i++) {
 
         alert.classList.add("active");
 
+        alert.style.backgroundColor = errorColor;
+
         if (document.querySelector(".ul li") === null) {
+            //print no text if there is no notes
+
             const p = document.createElement("p");
 
             p.id = "no-notes";
@@ -47,21 +67,23 @@ for (i = 0; i < remove.length; i++) {
 
             p.appendChild(txt);
             document.querySelector(".ul").appendChild(p);
+
+            clearAll.classList.add("hide");
         }
+
+        //Aert message for clicking
 
         setTimeout(function () {
             alert.classList.remove("active");
+
+            alert.style.backgroundColor = defaultColor;
         }, 2000);
     };
 }
 
-function addNotes() {
-    var ul = document.querySelector(".ul");
+//add notes
 
-    var text = document.querySelector(".text");
-
-    var fullText = text.value;
-
+addItems.addEventListener("click", function (e) {
     //alert transition and remove
 
     alert.classList.add("active");
@@ -70,16 +92,21 @@ function addNotes() {
 
     const li = document.createElement("li");
 
-    li.innerHTML = fullText;
+    li.appendChild(document.createTextNode(text.value));
 
-    if (fullText === "" || fullText.length === 0) {
+    if (text.value == null) {
         alert.innerHTML = "<b>" + "Error !!" + "</b>" + " Write something please";
 
         alert.style.backgroundColor = errorColor;
-    } else if (text.value.length < 10) {
+    }
+
+    //if note is less than 10 character
+    else if (text.value.length < 4) {
         alert.innerHTML = "<b>" + "Sorry!!" + "</b>" + " Note is too short.";
     } else {
         ul.appendChild(li);
+
+        clearAll.classList.remove("hide");
 
         alert.innerHTML = "<b>" + "Sucess!!" + "</b>" + " Note has been added.";
 
@@ -96,9 +123,7 @@ function addNotes() {
 
     const span = document.createElement("span");
 
-    span.className = "delete";
-
-    span.appendChild(document.createTextNode("\u00D7"));
+    span.className = "fa fa-trash-alt delete";
 
     li.appendChild(span);
 
@@ -114,6 +139,8 @@ function addNotes() {
 
             alert.classList.add("active");
 
+            alert.style.backgroundColor = errorColor;
+
             if (document.querySelector(".ul li") === null) {
                 const p = document.createElement("p");
 
@@ -123,39 +150,75 @@ function addNotes() {
 
                 p.appendChild(txt);
                 document.querySelector(".ul").appendChild(p);
+
+                clearAll.classList.add("hide");
             }
 
-            //settimeout
+            //setTimeout for delete icon
 
             setTimeout(function () {
                 alert.classList.remove("active");
+
+                alert.style.backgroundColor = defaultColor;
             }, 2000);
         };
     }
 
+    //setTimeout for addItems clicking
+
     setTimeout(function () {
         alert.classList.remove("active");
-    }, 2000);
-}
 
-function Clear() {
+        alert.style.backgroundColor = defaultColor;
+    }, 2000);
+
+    e.preventDefault();
+});
+
+//Clear textaea
+
+clearAll.addEventListener("click", function (e) {
     alert.classList.add("active");
 
-    var text = document.querySelector("textarea");
+    alert.innerHTML = "<b>" + "Ooops!!" + "</b>" + " Note has been deleted.";
 
-    var empty = text.value;
+    const p = document.createElement("p");
 
-    if (empty === "") {
-        alert.innerHTML = "<b>" + "Ops !!" + "</b>" + " Nothing to clear here.";
-    } else {
-        text.value = "";
+    p.id = "no-notes";
 
-        alert.innerHTML = "<b>" + "Sucess !!" + "</b>" + " Text has been cleared.";
+    var txt = document.createTextNode("All notes are deleted by user.");
 
-        alert.style.backgroundColor = sucessColor;
+    p.appendChild(txt);
+
+    const li = document.querySelectorAll(".ul li");
+
+    for (let i = 0; i < li.length; i++) {
+        l = li[i];
+
+        l.remove();
     }
 
-    setTimeout(function () {
-        alert.classList.remove("active");
-    }, 2000);
-}
+    ul.appendChild(p);
+
+    clearAll.classList.add("hide");
+});
+
+search.addEventListener("keyup", function (e) {
+    const searchText = e.target.value.toLowerCase();
+
+    const lists = document.querySelectorAll(".ul li");
+
+    for (let li of lists) {
+        const x = li.textContent;
+
+        if (x.toLowerCase().indexOf(searchText) != -1) {
+            li.style.display = "block";
+
+            clearAll.classList.remove("hide");
+        } else {
+            li.style.display = "none";
+
+            clearAll.classList.add("hide");
+        }
+    }
+});
