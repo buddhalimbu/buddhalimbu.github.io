@@ -2,19 +2,14 @@
 
 let $ = (selector) => document.querySelector(selector);
 
-let $$ = (selector) => document.querySelectorAll(selector); 
-
-var body = $("body");
-
-    head = $("head"),
-
-    link = window.location.href;
-
 // Bring Fontawesome
 
-function CreateFontAwesome() {
-    const FontAwesome = document.createElement("link");
+var head = $('head'),
+    body = $('body'),
+    link = window.location.href;
 
+function createIcon(){
+    const FontAwesome = document.createElement("link");
     FontAwesome.href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css";
 
     FontAwesome.rel = "stylesheet";
@@ -24,7 +19,6 @@ function CreateFontAwesome() {
 
     head.appendChild(FontAwesome);
 }
-
 //Create CSS
 
 function createStyle() {
@@ -174,7 +168,7 @@ function makeLinkButton() {
 }
 
 
-window.onload = function(){
+window.addEventListener("load", function(){
     //create spans for fontawesome
     var spans = [ "fa fa-facebook fb","fa fa-twitter tw","fa fa-pinterest pn","fa fa-linkedin ln","fa fa-whatsapp wa","fa fa-times closeShare" ];
     
@@ -188,7 +182,7 @@ window.onload = function(){
            
       //apend the both dic inside <div class="share"></div>
     share.appendChild(iconWrap);
-    body.appendChild(share);
+    document.body.appendChild(share);
     
    // Now declare the for new added divs
    var IconsHolder = $('.iconWrap');
@@ -207,9 +201,9 @@ window.onload = function(){
      }
      
 //Call function inside window.onload
-CreateFontAwesome();// fontawesome load
+createIcon();
 createStyle(); //css load in head
 ShowHideIcon(); // showhide button toggle 
 makeLinkButton(); //share link for all
-}
+},false);
 
