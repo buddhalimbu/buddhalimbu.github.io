@@ -1,4 +1,4 @@
-//create
+//creating JavaScript script
 
 const alert = document.querySelector(".alert"); // glob variable
 
@@ -39,8 +39,6 @@ for (i = 0; i < li.length; i++) {
 //romove note clicking on trash icon
 
 var remove = document.getElementsByClassName("delete");
-
-var i;
 
 for (i = 0; i < remove.length; i++) {
     var del = remove[i];
@@ -100,7 +98,7 @@ addItems.addEventListener("click", function (e) {
         alert.style.backgroundColor = errorColor;
     }
 
-    //if note is less than 10 character
+    //if note is less than 4 character
     else if (text.value.length < 4) {
         alert.innerHTML = "<b>" + "Sorry!!" + "</b>" + " Note is too short.";
     } else {
@@ -201,6 +199,11 @@ clearAll.addEventListener("click", function (e) {
     ul.appendChild(p);
 
     clearAll.classList.add("hide");
+setTimeout(function () {
+        alert.classList.remove("active");
+
+        alert.style.backgroundColor = defaultColor;
+    }, 2000);
 });
 
 search.addEventListener("keyup", function (e) {
