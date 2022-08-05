@@ -2,7 +2,7 @@
 
 let $ = (selector) => document.querySelector(selector);
 
-let $$ = (selector) => document.querySelectorAll(selector);
+let $$ = (selector) => document.querySelectorAll(selector); 
 
 var body = $("body");
 
@@ -24,24 +24,6 @@ function CreateFontAwesome() {
 
     head.appendChild(FontAwesome);
 }
-
-//Create Div
-
-const div = `
-   <div class="share">
-    <div class="shareWrap">
-        <span class="fa fa-share share-icon"></span>
-    </div>
-    <div class="iconWrap">
-        <span class="fa fa-facebook fb"></span><span class="fa fa-twitter tw"></span><span class="fa fa-pinterest pn"></span><span class="fa fa-linkedin ln"></span><span class="fa fa-whatsapp wa"></span>
-        <span class="fa fa-times closeShare"></span>
-    </div>
-</div>
-   
-`;
-
-    
-
 
 //Create CSS
 
@@ -129,7 +111,7 @@ function createStyle() {
     opacity:0;
 }
 
-                 `;
+                `;
 
     head.appendChild(style);
 }
@@ -137,23 +119,14 @@ function createStyle() {
 //Show Share Icon Cliking On Share Button
 
 function ShowHideIcon(){
-    var ShareIconClick = $('.share .shareWrap');
+
     var shareIconWrap = $('.share .iconWrap');
-    var CloseWrap = $('.share .closeShare');
-    
-    // Show share On Click
-    ShareIconClick.onclick = () => {
-        shareIconWrap.classList.remove('td');
-        ShareIconClick.classList.remove('sw');
-    }
-    
+    var CloseWrap = $('.iconWrap .closeShare');
+      
     // Hide Share On Click
     CloseWrap.onclick = () => {
         shareIconWrap.classList.add('td');
-        ShareIconClick.classList.add('sw');
-    }
-    
-    
+    }            
 }
 
 // Now adding Click Function();
@@ -200,23 +173,43 @@ function makeLinkButton() {
     };
 }
 
-//Call function 
-CreateFontAwesome();
-createStyle();
 
-
-function LoadFunctionAfterPageLoad(){
-     // Calling function after page load because this won't work on head without calling()
+window.onload = function(){
+    //create spans for fontawesome
+    var spans = [ "fa fa-facebook fb","fa fa-twitter tw","fa fa-pinterest pn","fa fa-linkedin ln","fa fa-whatsapp wa","fa fa-times closeShare" ];
     
-     // Create Function 
-     function flashDiv(){
-     document.body.innerHTML += div;
+   //create divs now 
+   var share = document.createElement('div');
+     share.className = "share";
+
+      //create div for all share icons
+       var iconWrap = document.createElement('div');
+       iconWrap.className = "iconWrap";
+           
+      //apend the both dic inside <div class="share"></div>
+    share.appendChild(iconWrap);
+    body.appendChild(share);
+    
+   // Now declare the for new added divs
+   var IconsHolder = $('.iconWrap');
+   var Ishare = $('.shareWrap');
+   //fragment
+     var frag = document.createDocumentFragment();
+    
+    //create all share Icons with loops
+    for(i=0;i<spans.length;i++){
+       var divsChild = document.createElement('span');
+       //setting class to span with loops
+       divsChild.className = spans[i];
+       
+       frag.appendChild(divsChild);
+       IconsHolder.appendChild(frag);
      }
-     // Call it Now
-    flashDiv();
-    ShowHideIcon();
-    makeLinkButton();
+     
+//Call function inside window.onload
+CreateFontAwesome();// fontawesome load
+createStyle(); //css load in head
+ShowHideIcon(); // showhide button toggle 
+makeLinkButton(); //share link for all
 }
 
-// Window onload function ()
-window.onload = LoadFunctionAfterPageLoad;
