@@ -1,7 +1,7 @@
   
 /*css goes here*/
 :root {
-    --main-color:linear-gradient(to right,#070a44,#41084a);
+    --main-color:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.5)),url('https://github.com/buddhalimbu/buddhalimbu.github.io/blob/master/image/pexels-markus-spiske-330771.jpg');
     --red-gradient:linear-gradient(to right,#d50000,yellow);
     --red-bg:#d50000;
     --purple-dark:#2f0a35;
