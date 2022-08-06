@@ -49,7 +49,7 @@ header {
     width: 100%;
     padding: 0;
     margin: 0;
-    background: var(--main-color);
+    background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.5)),url("https://github.com/buddhalimbu/buddhalimbu.github.io/blob/master/image/pexels-markus-spiske-330771.jpg");
     display: flex;
     display: -webkit-flex;
     flex-direction: column;
@@ -380,13 +380,14 @@ header .follow a:hover {
 /*MEDIA SCREEN*/
 @media screen and (max-width: 768px) {
     header #big {
-        font-size: 30px;
+        font-size: 35px;
     }
     header #autotext {
         margin-left: 0
     }
     header p {
-        font-size: 20px
+        font-size: 17px;
+        padding:0 14px;
     }
     header{
     }
