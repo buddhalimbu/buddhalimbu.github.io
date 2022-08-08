@@ -85,11 +85,11 @@
 <link href='//s3.buysellads.com ' rel='dns-prefetch'/>
 <link href='//stats.buysellads.com ' rel='dns-prefetch'/>
 <link href='//cdn.adpacks ' rel='dns-prefetch'/>
-  <link href='//fonts.googleapis.com/css?family=Muli:300,400,500,700,900' rel='stylesheet' type='text/css'/>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <link href='//fonts.googleapis.com/css?family=Poppins:300,400,500,700,900' rel='stylesheet' type='text/css'/>
+  
   <!--linking the css file-->
   <link href="style.css" rel="stylesheet"/>
-  <script src="js.js"></script>
+  <script src="index.js"></script>
 </head>
 <body>
   <div class="head header">
@@ -97,45 +97,9 @@
   <div class="heading">
         <h1>HTML CLEANER</h1>
         <p>
-        Using the below tool you can convert your HTML into code format. It will completely work and it is very effective tool to use if you want to insert code in your HTML posts. This is demo for you.
+        Using the below tool you can convert your HTML into code format. It will completely work and it is very effective tool to use if you want to insert code in your HTML posts.
         </p>
-         <div class="gotohome">
-          <a href="https://buddhalimbu.github.io">Goto Homepage</a>
-        </div>
-        <div class="demo-block">
-          <code>
-            <pre>
-&lt;!DOCTYPE html&gt;
-&lt;html&gt;
- &lt;head&gt;
-  &lt;title&gt;demo block&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
- &lt;p&gt;
-  This is demo content.
- &lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-        </pre>
-      </code>
-    </div>
-  </div>
-</div>
-</div>
-<br/>
-<div class="all-demo">
-  <div class="container">
-<textarea id="tt"></textarea>
-<button class="b">check</button>
-<br/>
-<div class="demo">
-  <code>
-<pre id="coded">
-</pre>
-  </code>
-</div>
-</div>
-</div>
+         
   <div class="boxes">
     <div class="container">
 			<div class="area-box">
@@ -143,24 +107,16 @@
 			<textarea id="textarea" spellcheck="false" placeholder="Enter your HTML code here"></textarea>
 		<div class="check-box">
 				<div class="input-group">
-					<input class="option-input checkbox" id="opt1" type="checkbox"/>
-						<label for='opt1'>convert <code>&amp;</code> to be <code>&amp;amp;</code> </label>
-
-					<input class="option-input checkbox" id="opt2" type="checkbox"/>
-						<label for='opt2'>convert <code>'</code> to be <code>&amp;#039;</code></label> 
-
-					<input class="option-input checkbox" id="opt3" type="checkbox"/>
-						<label for='opt3'>convert <code>"</code> to be <code>&amp;quot;</code></label> 
-
-					<input class="option-input checkbox" id="opt4" type="checkbox"/>
-						<label for='opt4'>convert <code>&lt;</code> to be <code>&amp;lt;</code> </label>
-					<input class="option-input checkbox" id="opt5" type="checkbox"/>
-						<label for='opt5'>convert <code>&gt;</code> to be <code>&amp;gt;</code></label>
+					
+					<input class="option-input checkbox" id="opt4" type="checkbox" checked="true"/>
+						<label for='opt4'>convert <code><b class="bred">&lt;</b></code> to be <code><b class="bred">&amp;lt;</b></code> </label>
+					<input class="option-input checkbox" id="opt5" type="checkbox" checked="true"/>
+						<label for='opt5'>convert <code><b class="bred">&gt;</b></code> to be <code><b class="bred">&amp;gt;</b></code></label>
 				</div>
 					
 			<div class="button-box">
-				<button class="convert" id="convert" onclick="Convert();this.disabled = true;">Convert</button>
-				<button class="clearconvert" id="clearconvert" onclick="Clear();">Clear</button>
+				<button class="convert" id="convert" onclick="Convert();">Convert</button>
+				<button class="clearconvert" id="clearconvert">Clear</button>
 			</div>
     </div>
   </div>
