@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Website Source Viewer</title>
+  
+  <script src="https://buddhalimbu.github.io/shareme/shareme.js"></script>
+  
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="container">
+      
+      <div class="heading"><h1>Source Code Viewer</h1></div>
+      <div class="top">
+        <input type="text" value="www.google.com"class="input"/>
+        <button class="sub" onclick="view();">View source</button>
+        </div>
+      <div class="htmlholder">
+        <div class="html-wrapper">
+       
+          <div class="source-head">
+            <div class="codeUl">
+              <span class="reddot"></span>
+              <span class="yellowdot"></span>
+              <span class="graydot"></span>
+              </div><span class="refresh" onclick="refresh();">Refresh</span>
+              <div class="url-holder">
+          <p class="source-text">Url:</p><span class="source-href"></span>
+          </div>
+          </div>
+          <textarea class="source-viewer">Website source code will be available here.</textarea>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Project -->
+  <script src="main.js"></script>
+</body>
+</html>
