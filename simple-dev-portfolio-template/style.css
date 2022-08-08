@@ -1,8 +1,8 @@
   
 /*css goes here*/
 :root {
-    --main-color:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.5)),url('https://github.com/buddhalimbu/buddhalimbu.github.io/blob/master/image/pexels-markus-spiske-330771.jpg');
-    --red-gradient:linear-gradient(to right,#d50000,yellow);
+    --main-color:linear-gradient(to right,#070a44,#41084a);
+    --red-gradient:linear-gradient(to right,#8083ff,#ff5589);
     --red-bg:#d50000;
     --purple-dark:#2f0a35;
     --blue-dark:#12094e;
@@ -11,21 +11,15 @@
     --teel-dark:#084b47;
 }
 *{
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
-	-webkit-box-sizing:border-box;
-	-ms-box-sizing:border-box;
-	-moz-box-sizing:border-box;
+    margin: 0;
+    padding: 0;
 }
-body,html {
-	margin: 0 auto;
-	padding: 0;
-	overflow-x: hidden;
-	font-family: 'Montserrat',sans-serif;
-	letter-spacing:normal;
-	font-size: 16px;
-	scroll-behavior: smooth;
+body {
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+    overflow-x: hidden;
 }
 .overlay{
     position: fixed;
@@ -40,16 +34,16 @@ body,html {
     transition: 0.8s ease;
     -webkit-transition:0.8 ease;
 }
-.toggleop .overlay {
+.toggle .overlay {
     visibility: visible;
     opacity: 1
 }
 header {
     height: 100vh;
-    width: 100%;
+    width: 100vw;
     padding: 0;
-    margin: 0;
-    background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.5)),url("https://github.com/buddhalimbu/buddhalimbu.github.io/blob/master/image/pexels-markus-spiske-330771.jpg");
+    margin: 0;       background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,1)),url('https://images.pexels.com/photos/330771/pexels-photo-330771.jpeg?cs=srgb&dl=pexels-markus-spiske-330771.jpg&fm=jpg');
+    background-size:cover;
     display: flex;
     display: -webkit-flex;
     flex-direction: column;
@@ -57,7 +51,6 @@ header {
     justify-content: center;
     align-items: center;
     text-align: center;
-  box-sizing:border-box
 }
 main {
 
@@ -71,31 +64,29 @@ header main img {
     margin-bottom: 14px
 }
 header h3 {
-    color: rgba(255,255,255,0.5);
-    font-size: 25px;
-    font-family: monospace;
-
-
+    color: rgba(255,255,255,1);
+    font-size: 28px;
+    text-transform:uppercase;
+    font-weight:normal
 }
 header #big {
     font-size: 90px;
-    color: rgba(255,255,255,0.77);
+    color: rgba(255,255,255,1);
     font-weight: 900;
-    font-family: monospace;
 }
 header p {
-    font-size: 30px;
-    color: rgba(255,255,255,0.6);
-    font-family: monospace;
+    font-size: 28x;
+    color: rgba(255,255,255,0.9);
 }
 header #autotext {
 margin-left: 25px
+color: #ff2b4a
 }
 
 header #autotext:after {
     animation: auto 24s infinite;
     display: inline-block;
-    color: rgba(255,255,255,0.6);
+    color: #ff2b4a;
     content: "Buddha";
     transition: 0.8s ease-in-out;
     -webkit-transition: 0.8s ease-in-out;
@@ -105,7 +96,7 @@ header #autotext:after {
 header .follow {
     display: flex;
     display: -webkit-flex;
-    margin: 30px auto 0 auto;
+    margin: 20px auto 0 auto;
     justify-content: center;
     align-items: center;
 }
@@ -116,20 +107,21 @@ header .follow a {
     line-height: 40px;
     text-align: center;
     border-radius: 50%;
-    margin: 0 7px;
-    color: rgba(255,255,255,0.6);
-    background: rgba(255,255,255,0.05);
+    margin: 0 5px;
+    font-size:17px;
+    color: rgba(255,255,255,1);            
     transition: 0.8s ease-in-out;
-    -webkit-transition: 0.8s ease-in-out;
-    border-color: rgba(255,255,255,0.2);
-    border-style: dashed;
-    border-width: 1.2px;
+    -webkit-transition: 0.8s ease;
 }
-header .follow a:hover {
-    border-style: ridge;
-    border-color: #eee;
-    color: #eee
+
+header .follow a span {
+    font-size:23px
 }
+
+header .follow a:hover span {
+    color:#ff2b4a
+}
+
 @keyframes auto {
     0% {
     }
@@ -139,9 +131,9 @@ header .follow a:hover {
     }
     40% {
         content: 'a YouTuber';
-    }
+    Web-}
     60% {
-        content: 'a Web-Developer';
+        content: 'a Developer';
     }
     80% {
         content: 'a designer';
@@ -195,7 +187,7 @@ header .follow a:hover {
     position: relative;
     width: auto;
     height: auto;
-    background: rgba(255,255,255,0.1);
+    background: var(--red-gradient);
     border-radius: 7px;
     transition: .8s;
     max-height: 0;
@@ -214,7 +206,7 @@ header .follow a:hover {
     padding: 10px;
     border-bottom-style: dashed;
     border-bottom-color: rgba(255,255,255,0.1);
-    border-bottom-width: 1px;
+    border-bottom-width: 1px;    
 }
 .share-wrapper a:last-child{
     border:none!important;
@@ -222,7 +214,7 @@ header .follow a:hover {
 .share-wrapper a i {
     font-size: 20px
 }
-.toggleshare .share {max-height: 25rem}
+.toggle .share {max-height: 25rem}
 .share-wrapper a:hover{
     color: #eee
 }
@@ -266,35 +258,29 @@ header .follow a:hover {
 
 .contact {
     position: fixed;
-    height: 0%;
-    width: 0%;
-    background: var(--main-color);
+    height: 0;
+    width: 0;
+    background: var(--red-gradient);
     bottom: 0;
     left: 0;
     padding: 0;
     margin: 0;
-    z-index: 55;
+    z-index: 575;
     transition: 0.8s ease;
     -webkit-transition:0.8s ease;
     overflow: hidden;
 }
 .contact .container {
-    display: flex;
-    display: -webkit-flex;
-    flex-direction: column;
-    -webkit-flex-direction:column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 100%;
+    display: grid;
+    display: -webkit-grid;
+    place-items:center;
+    height:100vh;
+    width:100vw;
 }
 .contact .form {
-    display: flex;
-    display: -webkit-flex;
-    flex-direction: column;
-    -webkit-flex-direction:column;
-    justify-content: none;
-    align-items: none;
+    display: grid;
+    display: -webkit-grid;
+    width:100%
 }
 .contact .form ::placeholder{
     color: rgba(255,255,255,0.5);
@@ -302,11 +288,11 @@ header .follow a:hover {
 }
 .contact .input-group {
     margin: 14px 0;
-    display: flex;
-    display: -webkit-flex;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    display: -webkit-grid;
+    grid-template-columns:repeat(auto-fit,minmax(25px,1fr));
     font-family: monospace;
+    grid-gap:10px
 }
 .contact .input-group input {
     height: 42px;
@@ -318,13 +304,16 @@ header .follow a:hover {
     border-color:rgba(255,255,255,0.1);
     border-style: dashed;
     border-width: 1px;
-    width: 100%;
+    width: auto;
     color: rgba(255,255,255,0.5);
-    padding: 0 16px
+    padding: 0 16px;
 }
-.contact .input-group input:first-child {
-    margin-right: 10px
+
+.bandt {
+    display:grid;
+    grid-template-columns:1fr
 }
+
 .contact #textarea {
     height: 100px;
     background: rgba(255,255,255,0.06);
@@ -380,14 +369,16 @@ header .follow a:hover {
 /*MEDIA SCREEN*/
 @media screen and (max-width: 768px) {
     header #big {
-        font-size: 35px;
+        font-size: 30px;
     }
+     header h3 {
+         font-size:15px
+     }
     header #autotext {
         margin-left: 0
     }
     header p {
-        font-size: 17px;
-        padding:0 14px;
+        font-size: 20px
     }
     header{
     }
@@ -397,7 +388,6 @@ header .follow a:hover {
     .contact .form{
         padding: 10px;
         box-sizing: border-box;
-        overflow: hidden;
     }
     header .follow a {
         width: 34px;
@@ -407,26 +397,20 @@ header .follow a:hover {
 }
 @media screen and (max-width: 768px) {
     header{
-	    position:fixed;
-	    left:0;
-	    top:0;
-	    width:100%;
-	    height:100%;
-	    box-sizing:border-box
         
     }
     header .follow a {
-        width: 34px;
-        height: 34px;
-        line-height: 34px;
+        width: 27px;
+        height: 27px;
+        line-height: 27px;
     }
     header .follow a span {
-        font-size: 14px
+        font-size: 20px
     }
     .ct,.sharethis {
-        width: 44px;
-        height: 44px;
-        line-height: 44px
+        width: 40px;
+        height: 40px;
+        line-height: 40px
     }
     .ct span,.sharethis i {
         font-size: 16px
@@ -435,14 +419,14 @@ header .follow a:hover {
         left: 12px
     }
     .share-wrapper a {
-        padding: 14px
+        padding: 9px
     }
     .share-wrapper a i {
-        font-size: 16px
-    }
+        font-size: 14px
+  }
     header main img {
-        width: 210px;
-        height: 210px;
+     width: 150px;
+     height: 150px;
     }
 }
 @media screen and (max-height: 550px){
