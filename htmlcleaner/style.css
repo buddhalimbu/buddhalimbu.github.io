@@ -7,7 +7,7 @@
 
 		body {
 			background: #f0f0f0;
-      font-family: 'Muli',sans-serif;
+      font-family: 'Poppins',sans-serif;
 
 		}
     .head {
@@ -20,12 +20,12 @@
     .footer {
       margin-top: 30px
     }
-    .boxes {background: none}
+    .boxes {background: none;margin-top:30px}
     .container {
       width: 100%;
       max-width: 1000px;
       margin: 0 auto;
-      padding: 0 10px
+      padding: 0 10px;
     }
     .head h1 {padding: 10px 0}
     .head p {padding: 14px 0}
@@ -40,7 +40,7 @@
 			background: #e0f2f1;
 			padding: 20px;
 			border-radius: 8px;
-			box-shadow: 0px 1px 4px 1px rgba(0,0,0,0.3);
+			box-shadow: 1px 10px 30px rgba(0,0,0,0.351);
       box-sizing: border-box;
 		}
 		.text-box {
@@ -48,6 +48,7 @@
 			border-radius: 20px;
 			height: auto;
       position: relative;
+      
 			
 		}
 		#textarea {
@@ -63,27 +64,41 @@
 			outline: 0;
 			border-top-right-radius: 12px;
 			border-top-left-radius: 12px;
-			border-top: 4px solid #999
+			border-top: 4px solid #999;
+			
 		}
 
 		/* button group */
 		.button-box {
-			display: flex;justify-content: center;align-items: center;
+			display: grid;
+			grid-template-columns:1fr ;
+			grid-gap:10px;
 			padding: 30px 0 0 0
 		}
+		
+		.button-box.add {
+		   grid-template-columns:1fr 1fr; 
+		}
+		
 		.button-box button {
-			width:110px;
+			width:100%;
 			padding: 10px 12px;
 			border:0;
 			outline: 0;
-			background: rgba(255,255,255,0.2);
+			background: rgba(255,255,255,0.1);
 			color: #d7ccc8;
-			margin: 0 13px;
+			margin: 0 ;
 			font-size: 14px;
 			display: block;
-			border-radius: 100px;
-			box-shadow: 0px 2px 5px 2px rgba(0,0,0,0.2)
+			border-radius: 2px;
+			box-shadow: 1px 5px 14px rgba(0,0,0,0.12);
+			font-weight:bold;
+			text-transform:uppercase;
 		}
+		
+		.button-box .clearconvert{
+		display:none
+}
 		.button-box button:hover {
 			background: #d7ccc8;color: #311b92;
 			cursor: pointer;
@@ -112,8 +127,8 @@
 		}
 		.input-group {
 			display: flex;
-			justify-content: center;
-			align-items: center;
+			justify-content: none;
+			align-items: left;
 			flex-wrap: wrap;
 		}
 
@@ -154,83 +169,24 @@
 			background: rgba(0,0,0,0.7);
 			border:2px solid #212121;
 		}
-    /*DEMO*/
-    .demo-block {
-      padding: 14px;
-      background: #f4f4f4;
-      border-color: #ddd;
-      border-width: 2px;
-      border-style: dashed;
-      border-radius: 3px;
-      display: block;
-      margin: 20px 0;
-      position: relative;
-    }
+  
     .copy {
       position: absolute;
-      padding: 10px;
-      background: #d50000;
+      padding:4px 10px;
+      background: #d1e0e0;
       border-radius: 3px;
-      color: #fff;
+      color: #000;
       top: 10px;
       right: 10px;
       z-index: 22;
       cursor: pointer;
+      text-transform: uppercase;
+      font-weight:bold ;
+      font-size:10px;
+      
     }
     .copy:hover {background: #1f2024}
-    .demo-block code {white-space:nowrap; }
-    .gotohome{
-      display: inline-block;
-      margin: 10px 0
-    }
-    .gotohome a {
-      text-decoration: none;
-      padding: 10px;
-      border-radius: 3px;
-      background: #1f2024;
-      color: #fff;
-    }
-    .gotohome a:hover {
-      background: #d50000
-    }
-    /*ALL DEMO*/
-    .all-demo {
-      background: #fff;
-      padding:20px  0;
-      margin: 14px 0
-    }
-    .all-demo #tt {
-      background: #f5f5f5;
-      border-radius: 3px;
-      padding: 14px;
-      border-color: tomato;
-      border-width: 2px;
-      border-style: dashed;
-      height: 200px;
-      width: 100%;
-      box-sizing: border-box;
-    }
-    .all-demo #tt:focus {outline: none}
-    .b {
-      padding: 10px 14px;
-      border-radius: 3px;
-      border:none;
-      outline: none;
-      color: #fff;
-      background: #d50000;
-      margin-top: 20px;
-      text-transform: uppercase;
-      cursor: pointer;
-    }
-    .demo {
-      background: tomato;
-      padding: 20px 14px;
-      border-bottom: 10px solid red;
-      border-radius: 3px;
-      margin: 20px 0;
-      color: #fff;
-      font-size: 17px;
-      overflow:auto;
-      white-space:nowrap;
-    }
-.demo code{}
+ 
+.bred {
+    color:red;
+}
