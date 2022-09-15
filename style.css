@@ -421,7 +421,7 @@ transform: rotate(-45deg);
 
 .about-section {
 background: #000;
-color: color: var(--white-color);
+color: var(--white-color);
 width: 100%;
 position: relative;
 clear: both;
@@ -448,7 +448,7 @@ grid-auto-rows: auto;
 	font-size: 45px;
 	padding: 10px 0;
 	margin: 20px auto;
-	color: color: var(--white-color);
+	color: var(--white-color);
 	letter-spacing: -0.05em;
         text-transform:uppercase
 }
@@ -556,10 +556,10 @@ grid-auto-rows: auto;
 		display: inline-block;
 	}
 	.about-section .my-skill .css-bar:before{
-		background: green
+		background: var(--theme-color)
 	}
 	.about-section .my-skill .html-bar:before{
-		background: #01588d
+		background: #d7700c
 	}
 	.about-section .my-skill .js-bar:before{
 		background: var(--main-color)
