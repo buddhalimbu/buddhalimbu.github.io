@@ -190,7 +190,7 @@
 	.blog .outer-wrapper{
 		padding: 20px
 	}.bars:after {
-    content: attr(data-text);width:70px}
+    content: attr(data-text);width:70px;right:30px}
 }
 
 @media screen and (max-width: 400px) {
