@@ -187,6 +187,7 @@ header .logo h1 {
 	color: var(--white-color);
 	font-weight: 900
 }
+header .logo h1 span {color:var(--main-color)}
 header .bars {
 	display: none;
 }
