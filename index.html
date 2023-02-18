@@ -655,6 +655,42 @@ document.onkeydown = function(e) {
         <p class="m-icon"><i class="fab fa-facebook-messenger"></i></p>
     </div>
 </div>
+<script>
+    var url = 'https://wati-integration-service.clare.ai/ShopifyWidget/shopifyWidget.js?33758';
+    var s = document.createElement('script');
+    s.type = 'text/javascript';
+    s.async = true;
+    s.src = url;
+    var options = {
+  "enabled":true,
+  "chatButtonSetting":{
+      "backgroundColor":"#00b500",
+      "ctaText":"Message Me",
+      "borderRadius":"25",
+      "marginLeft":"20",
+      "marginBottom":"30",
+      "marginRight":"50",
+      "position":"left"
+  },
+  "brandSetting":{
+      "brandName":"Buddha",
+      "brandSubTitle":"Reply as soon as message delivers.",
+      "brandImg":"https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEifKaf20E-EoDXXJBHIXnY66nGmzfUrhCoAxTDLmL_7dAObpoD6PhNN6LRLX450DWxAOYpC0KTfCMhq-D6RYzFFEvNbgY2IcI9aHwgEyXykzyCqfAPz2kXFjUUI52v6mtUagJTm7ATpKo5YAOd5Xc77Yit3O49sMoupcr8r_W-m614TzsP-oAsxTvvr/s1600/FB_IMG_1676729737452.jpg",
+      "welcomeText":"Hi there!\nI'm will talk to you soon.",
+      "messageText":"Hello, I have a question about {{page_link}}",
+      "backgroundColor":"#0a5f54",
+      "ctaText":"Send Now",
+      "borderRadius":"25",
+      "autoShow":false,
+      "phoneNumber":"9779813592947"
+  }
+};
+    s.onload = function() {
+        CreateWhatsappChatWidget(options);
+    };
+    var x = document.getElementsByTagName('script')[0];
+    x.parentNode.insertBefore(s, x);
+</script>
 
         <script src="index.js"></script>
     </body>
