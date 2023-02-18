@@ -78,10 +78,12 @@
 	}*/
 	.section .sc-footer {
 		flex-direction: column;
+width:100%;margin:0 auto;}
 	}
 	.section .sc-links {
 		margin: 30px 0 0
 	}
+.section .sc-links a {width:100%;margin:0 auto;display:block}
 	.main .section .msg-note {
 		margin: 0
 	}
