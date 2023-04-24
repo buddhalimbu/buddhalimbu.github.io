@@ -43,22 +43,16 @@ document.addEventListener('DOMContentLoaded', function() {
     copyBoxElement.appendChild(copymeElement);
   });
   
-  let copymeElements = document.querySelectorAll('.copyme');
-  
-  copymeElements.forEach(function(element) {
-    
+  let copymeElements = document.querySelectorAll('.copyme');  
+  copymeElements.forEach(function(element) { 
     
     element.addEventListener('click', function(event) {
       event.preventDefault();
-      
-      
+         
     let c = document.createElement("span");
     c.className = "alert";
     c.innerText=" Sayari Has Been Copied";
-    
-      
-      
-      
+         
       let textElement = document.createElement('input');
       document.body.appendChild(textElement);
       let parentElement = this.parentElement.parentElement;
