@@ -1,33 +1,70 @@
-/*CSS FILE HERE*/
-	body {
-		width: 100%;
-		max-width: 900px;
-		margin: 0 auto;
-		box-sizing: border-box;
-		background: #f2f2f2;
-		font-family: monospace;
-	}
+@import url('https://fonts.googleapis.com/css2?family=Nunito&family=Raleway:ital,wght@0,500;0,600;0,900;1,400&display=swap');
+
+
+html {
+    margin: 0;
+word-break:break-word;
+word-wrap:break-word;
+text-rendering:optimizeLegibility;
+-webkit-font-smoothing:antialiased;
+-webkit-text-size-adjust:100%;
+scroll-behaviour:smooth
+}
+
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box
+}
+body {
+    font-size: 15pt;
+   -webkit-print-color-adjust: exact;
+  font-family: "Raleway",sans-serif;
+ 
+}
+
+section{
+  width:100%;
+  max-width: 780px;
+  margin:0 auto
+}
+
+.item {
+  position: relative;
+  display:block;
+  margin: 10px auto
+}
 	.box {
 		text-align: center;
+		text-align-last: center;
+		padding:20px;
+		margin-top: 30px
 	}
 	.box h1 {
-		font-size: 30px;
+		font-size: 27px;
+		padding:10px 15px;
+		background: #ff3747;
+		display: inline-flex;
+		color:#fff;
+		border-radius: 6px;
+		text-transform: uppercase
 	}
 	.box p {
-		font-size: 24px
+		font-size: 20px;
+		padding:20px;
 	}
 	.gotohome {
-		margin: 20px 0;
+		margin: 10px 0 20px 0;
 		padding: 20px
 	}
 	.gotohome a {
-		padding: 10px 14px ;
-		border-radius: 3px;
+		padding: 8px 14px ;
+		border-radius: 10px;
 		border-style: dashed;
-		border-color: #000;
-		color: #000;
+		border-color: #00cba9;
+		color: #00cba9;
 		text-decoration: none;
-		font-size: 17px
+		font-size: 15px
 	}
 	.gotohome a:hover {
 		background: #000;
@@ -38,6 +75,8 @@
 .sayari{
 font-size:18px;
 font-weight:bold;
+padding: 20px 0;
+font-family: "Nunito",sans-serif
 }
 .sayari-wrapper{
 float:left;
@@ -47,36 +86,52 @@ max-width:50%;
 display:inline-block;
 height:auto;
 box-sizing:content-box;
-margin-bottom:10px;
+margin-bottom:20px;
+
+
 }
 .sayari-wrapper:nth-child(odd){
 clear:both;
 }
 .sayari-box{
-padding:14px;
+padding:30px;
 margin:16px 20px;
 background:#fff;
-border-top:10px solid #6a1b9a;
+border-top:10px solid #00cba9;
 color:#000;
 border-radius:7px;
-box-shadow:0 1px 5px 1px rgba(0,0,0,0.32);
+box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 position:relative;
+text-transform: capitalize;
+overflow: hidden
 }
 .sayari-box .alert{
 position:absolute;
-bottom:-50px;
-right:8px;
-padding:10px;
-border-radius:100px;
+top:-50px;
+right:13px;
+padding: 5px 8px;
+border-radius:2px;
 text-transform:uppercase;
-background:#fff;
-box-shadow:0 3px 6px 3px rgba(0,0,0,0.1);
+background:#ff3747;
+box-shadow:0 3px 6px 3px rgba(0,0,0,0.01);
+color:#fff;
 z-index:55;
-display:none;
 transition:0.5 ease;
+font-size: 8px
 }
+
+.sayari-box .alert.show {
+  visibility:visible;
+  opacity:1;
+  top: 30px;
+  transition: 0.4s ease-in-out
+}
+
+
+
+
+
 .copy-box{
-display:block;
 position:relative;
 padding:20px 0 10px 0;
 display:flex;
@@ -93,26 +148,50 @@ width:100%;
 margin:0 auto;
 cursor:pointer;
 box-sizing:border-box;
+font-size: 14px;
+text-transform: uppercase;
+font-weight: bold
+}
+.copy-box span i {
+  margin-left: 10px
 }
 .copy-box span:first-child{
 margin-right:8px;
 }
 .copy-box span:hover{
-background:#311b92;
+background:#ff3747;
+color:#fff;
 transition:0.8s ease-in-out;
+border:none;
 }
 .copy-box span i{
-font-size:20px;padding-right:7px;
+font-size:20px;
+padding-right:7px;
 }
 .shareme{
-padding:10px;background:green;color:#fff;border-radius:3px;
+padding:10px;background: transparent;color:#00cba9;border-radius:3px;
+border:1px solid #00cba9;
 }
 .copyme{
 padding:10px;
-background:#6a1b9a;
+background:#00cba9;
 color:#fff;
 border-radius:3px;
 }
+
+
+footer {
+  padding: 30px 12px;
+  text-align: center;
+  color:#fff;
+  background:#00cba9;
+  margin-top: 30px
+}
+
+
+
+
+
 @media screen and (max-width:600px){
   .sayari-wrapper{
   float:none;
@@ -120,7 +199,32 @@ border-radius:3px;
   box-sizing:border-box;
   margin-bottom:15px;
   }
+  .sayari-box {
+    margin:34px 20px
+  }
+  footer {
+    font-size: 13px
+  }
+  .box {
+    padding:0;
+    margin:0;
+  }
+  .box h1 {
+    display: block;
+    text-align: center;
+    border-radius: 0px;
+    font-size: 22px
+  }
+  .box p {
+    font-size: 13px;
+    margin-top: 12px;
+    background:none
+    }
 }
+
+
+
+
 @media screen and (max-width:400px){
   .copy-box{
   flex-direction:column;
