@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
     sharemeElement.classList.add('shareme');
     sharemeElement.innerText=" Share Me ";
     let sharemeIconElement = document.createElement('i');
-    sharemeIconElement.classList.add('fa');
+    sharemeIconElement.classList.add('fab');
     sharemeIconElement.classList.add('fa-whatsapp');
     sharemeElement.appendChild(sharemeIconElement);
     copyBoxElement.appendChild(sharemeElement);
