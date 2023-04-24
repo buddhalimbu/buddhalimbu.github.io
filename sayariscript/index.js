@@ -1,38 +1,92 @@
+console.log('Hello World!');
 
-$(document).ready(function(){
-    $(".sayari").each(function(){
-      ($(this).wrap('<div class="sayari-box"/>'));
-      if($(this).parent().hasClass('sayari-box')){
-      $(this).parent().wrap('<div class="sayari-wrapper"/>');
-      }
-    });
-    $(".sayari-box").each(function(){
-    ($(this).prepend('<span class="alert">Copied</span>'));
-    ($(this).append('<div class="copy-box"/>'));
-    if($(this).children().hasClass('copy-box')){
-    $(this).children('.copy-box').append('<span class="shareme"><i class="fa fa-whatsapp"/>Share</span><span class="copyme"><i class="fa fa-clipboard"/>Copy</span>');
+document.addEventListener('DOMContentLoaded', function() {
+  let sayariElements = document.querySelectorAll('.sayari');
+  
+  sayariElements.forEach(function(element) {
+    let parentElement = document.createElement('div');
+    parentElement.classList.add('sayari-box');
+    element.parentNode.insertBefore(parentElement, element);
+    parentElement.appendChild(element);
+    
+    if (parentElement.classList.contains('sayari-box')) {
+      let grandparentElement = document.createElement('div');
+      grandparentElement.classList.add('sayari-wrapper');
+      parentElement.parentNode.insertBefore(grandparentElement, parentElement);
+      grandparentElement.appendChild(parentElement);
     }
   });
-  //copy text inside the sayari box
-  $('.copyme').click(function(e){
-e.preventDefault();
-		var $text = $("<input>");
-		$('body').append($text);
-		$(this).css({'background':'green','cursor':''});
-		$text.val($(this).parent('.copy-box').parent('.sayari-box').find("> .sayari").text()).select();
-		document.execCommand("copy");
-        //remove temp
-		$text.remove();
-        //show alert
-        $(this).parent('.copy-box').parent('.sayari-box').find('> .alert').show(800).fadeOut(300).delay(200);
-        
+  
+  let sayariBoxElements = document.querySelectorAll('.sayari-box');
+  
+  sayariBoxElements.forEach(function(element) {
+    let copyBoxElement = document.createElement('div');
+    copyBoxElement.classList.add('copy-box');
+    element.appendChild(copyBoxElement);
+    
+    let sharemeElement = document.createElement('span');
+    sharemeElement.classList.add('shareme');
+    sharemeElement.innerText=" Share Me ";
+    let sharemeIconElement = document.createElement('i');
+    sharemeIconElement.classList.add('fa');
+    sharemeIconElement.classList.add('fa-whatsapp');
+    sharemeElement.appendChild(sharemeIconElement);
+    copyBoxElement.appendChild(sharemeElement);
+    
+    let copymeElement = document.createElement('span');
+    copymeElement.classList.add('copyme');
+    copymeElement.innerText= "Copy Me";
+    let copymeIconElement = document.createElement('i');
+    copymeIconElement.classList.add('fa');
+    copymeIconElement.classList.add('fa-clipboard');
+    copymeElement.appendChild(copymeIconElement);
+    copyBoxElement.appendChild(copymeElement);
   });
-  //share on whatsapp script
-  $('.shareme').click(function(){
-  var title = document.location.origin;
-  var text = $(this).parent('.copy-box').parent('.sayari-box').find("> .sayari").text();
-            var msg = encodeURIComponent(text) + " - " + title;
-            var open_url = "https://api.whatsapp.com/send?text=" + msg;
-            window.open(open_url, "_blank");
-            });
+  
+  let copymeElements = document.querySelectorAll('.copyme');
+  
+  copymeElements.forEach(function(element) {
+    
+    
+    element.addEventListener('click', function(event) {
+      event.preventDefault();
+      
+      
+    let c = document.createElement("span");
+    c.className = "alert";
+    c.innerText=" Sayari Has Been Copied";
+    
+      
+      
+      
+      let textElement = document.createElement('input');
+      document.body.appendChild(textElement);
+      let parentElement = this.parentElement.parentElement;
+      parentElement.append(c);
+      let sayariElement = parentElement.querySelector('.sayari');
+      textElement.value = sayariElement.textContent;
+      textElement.select();
+      document.execCommand('copy');
+      textElement.remove();
+      parentElement.querySelector('.alert').classList.add("show");
+      setTimeout(function() {
+        parentElement.querySelector('.alert').classList.remove("show");
+      }, 3000);
+    });
+  });
+  
+  let sharemeElements = document.querySelectorAll('.shareme');
+  
+  sharemeElements.forEach(function(element) {
+    element.addEventListener('click', function(event) {
+      event.preventDefault();
+      let parentElement = this.parentElement.parentElement;
+      let sayariElement = parentElement.querySelector('.sayari');
+      let title = document.location.origin;
+      let text = sayariElement.textContent;
+      let msg = encodeURIComponent(text) + ' - ' + title;
+      let open_url = 'https://api.whatsapp.com/send?text=' + msg;
+      window.open(open_url, '_blank');
+    });
+  });
 });
