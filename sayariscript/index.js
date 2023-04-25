@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function() {
       let parentElement = this.parentElement.parentElement;
       parentElement.append(c);
       let sayariElement = parentElement.querySelector('.sayari');
-      textElement.value = sayariElement.textContent;
+      textElement.value = sayariElement.textContent.trim();
       textElement.select();
       document.execCommand('copy');
       textElement.remove();
